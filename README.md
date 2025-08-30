@@ -1,5 +1,5 @@
-- 👋 Hi, I’m @Aicyraa, I'm a senior high school ict student 
-- 👀 I’m interested in learning web base languages
+Hi, I’m Jee, I'm a senior high school ict student 
+-
 
 
 <!---
