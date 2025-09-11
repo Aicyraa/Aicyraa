@@ -2,7 +2,7 @@
 
 ###
 
-<img align="right" height="300" src="[https://ph.pinterest.com/pin/199917670952355062/](https://media.tenor.com/LAMK5zXdyWkAAAAC/anime-girl.gif)"  />
+<img align="right" height="300" src="https://media.tenor.com/LAMK5zXdyWkAAAAC/anime-girl.gif"  />
 
 ###
 
@@ -28,10 +28,10 @@
 
 <div align="left" style="width: 100%">
   <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Jee/0">
-    <img style="width: 100%" src="[https://github-readme-medium-recent-article.vercel.app/medium/@Jee/0](https://aicyraa.github.io/Trivia-questions/)" alt="Medium post 1"  />
+    <img style="width: 100%" src="https://aicyraa.github.io/Trivia-questions/" alt="Medium post 1"  />
   </a>
   <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Jee/1">
-    <img style="width: 100%" src="[https://github-readme-medium-recent-article.vercel.app/medium/@Jee/1](https://aicyraa.github.io/Quiz-App/)" alt="Medium post 2"  />
+    <img style="width: 100%" src="https://aicyraa.github.io/Quiz-App/" alt="Medium post 2"  />
   </a>
 </div>
 
