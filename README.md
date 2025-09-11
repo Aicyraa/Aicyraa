@@ -2,7 +2,7 @@
 
 ###
 
-<img align="right" height="207" src="https://i.imgflip.com/65efzo.gif"  />
+<img align="right" height="300" src="https://i.imgflip.com/65efzo.gif"  />
 
 ###
 
@@ -26,7 +26,7 @@
 
 ###
 
-<div align="center" style="width: 100%">
+<div align="left" style="width: 100%">
   <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Jee/0">
     <img style="width: 100%" src="https://github-readme-medium-recent-article.vercel.app/medium/@Jee/0" alt="Medium post 1"  />
   </a>
@@ -37,7 +37,7 @@
 
 ###
 
-<div align="right">
+<div align="left">
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Aicyraa&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=4&theme=dracula&hide_border=true&order=2" height="150" alt="languages graph"  />
 </div>
 
