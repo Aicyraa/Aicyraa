@@ -2,11 +2,11 @@
 
 ###
 
-<img align="right" height="300" src="https://media.tenor.com/LAMK5zXdyWkAAAAC/anime-girl.gif"  />
+<img align="right" height="294" src="https://media.tenor.com/LAMK5zXdyWkAAAAC/anime-girl.gif"  />
 
 ###
 
-<div align="left">
+<div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="60" alt="javascript logo"  />
   <img width="25" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="60" alt="nodejs logo"  />
