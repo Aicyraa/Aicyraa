@@ -2,7 +2,7 @@
 
 ###
 
-<img align="right" height="300" src="[https://i.imgflip.com/65efzo.gif](https://ph.pinterest.com/pin/199917670952355062/)"  />
+<img align="right" height="300" src="https://ph.pinterest.com/pin/199917670952355062/"  />
 
 ###
 
