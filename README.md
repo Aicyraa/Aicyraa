@@ -26,19 +26,14 @@
 
 ###
 
-<div align="left" style="width: 100%">
-  <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Jee/0">
-    <img style="width: 100%" src="https://aicyraa.github.io/Trivia-questions/" alt="Medium post 1"  />
-  </a>
-  <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Jee/1">
-    <img style="width: 100%" src="https://aicyraa.github.io/Quiz-App/" alt="Medium post 2"  />
-  </a>
+<div align="left">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Aicyraa&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=4&theme=dracula&hide_border=true&order=2" height="150" alt="languages graph"  />
 </div>
 
 ###
 
-<div align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Aicyraa&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=4&theme=dracula&hide_border=true&order=2" height="150" alt="languages graph"  />
-</div>
+<br clear="both">
+
+<img src="https://raw.githubusercontent.com/Aicyraa/Aicyraa/output/snake.svg" alt="Snake animation" />
 
 ###
