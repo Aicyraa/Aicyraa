@@ -3,11 +3,9 @@
 </div>
 
 <h1 align="center">Hello 👋🏻, I'm Jee</h1>
-###
 <h3 align="left">🎯 I love making things  📽️.</h4>
 <h3 align="left">🎯 I'm eager to learn 🗒️. </h4>
 <h3 align="left">🎯 I'm passionate about learning programming 🧑🏻‍💻. </h4>
-
 ###
 
 <h2 align="left">🌐 Tech Stack</h2>
