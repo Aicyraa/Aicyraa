@@ -12,7 +12,11 @@
 
 <br clear="both">
 
-<h4 align="left">🎯 I love making things  📽️.<br>🎯 I'm eager to learn 🗒️.<br>🎯 I'm passionate about learning programming 🧑🏻‍💻.</h4>
+<h4 align="left">🎯 I love making things  📽️.</h4>
+<br>
+<h4 align="left">🎯 I'm eager to learn 🗒️. </h4>
+<br>
+<h4 align="left">🎯 I'm passionate about learning programming 🧑🏻‍💻. </h4>
 
 ###
 
