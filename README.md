@@ -1,8 +1,6 @@
 <div>
   <img style="100%" src="https://capsule-render.vercel.app/api?type=waving&height=89&section=header&reversal=false&fontSize=70&fontColor=FFFFFF&fontAlign=50&fontAlignY=50&stroke=FFFFFF&strokeWidth=4&descSize=27&descAlign=50&descAlignY=50&textBg=false&theme=cobalt"  />
 </div>
-<h2 align="left">🌐 Tech Stack</h2>
-
 
 ![](https://github-readme-stats.vercel.app/api?username=Aicyraa&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=Aicyraa&theme=gruvbox&hide_border=false)<br/>
