@@ -10,7 +10,7 @@ jobs:
     name: Profile Readme Development Stats
     runs-on: ubuntu-latest
     steps:
-      - uses: anmol098/waka-readme-stats@master
+      - uses: anmol098/waka-readme-stats@v5
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -18,11 +18,10 @@ jobs:
           SHOW_LINES_OF_CODE: "False"
           SHOW_TOTAL_CODE_TIME: "False"
           SHOW_PROFILE_VIEWS: "False"
-          SHOW_LOC_CHART: "False"
-          SHOW_UPDATED_DATE: "False"
-          SHOW_LANGUAGE_PER_REPO: "False"
-          SHOW_TIMEZONE: "False"
-          SHOW_LANGUAGE: "True"
           SHOW_OS: "True"
+          SHOW_LANGUAGE: "True"
           SHOW_EDITORS: "True"
+          SHOW_LANGUAGE_PER_REPO: "False"
+          SHOW_LOC_CHART: "False"
+          SHOW_TIMEZONE: "False"
           COMMIT_USERNAME: "Jee"
