@@ -15,6 +15,43 @@
 </div>
 
 <!--START_SECTION:waka-->
+**I'm an Early 🐤** 
 
- Last Updated on 30/03/2026 19:34:14 UTC
+```text
+🌞 Morning                250 commits         █████░░░░░░░░░░░░░░░░░░░░   21.44 % 
+🌆 Daytime                354 commits         ████████░░░░░░░░░░░░░░░░░   30.36 % 
+🌃 Evening                554 commits         ████████████░░░░░░░░░░░░░   47.51 % 
+🌙 Night                  8 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.69 % 
+```
+📅 **I'm Most Productive on Monday** 
+
+```text
+Monday                   200 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.15 % 
+Tuesday                  129 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.06 % 
+Wednesday                179 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.35 % 
+Thursday                 132 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.32 % 
+Friday                   137 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.75 % 
+Saturday                 194 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.64 % 
+Sunday                   195 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.72 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+💬 Programming Languages: 
+No Activity Tracked This Week
+
+🔥 Editors: 
+No Activity Tracked This Week
+
+🐱‍💻 Projects: 
+No Activity Tracked This Week
+
+💻 Operating System: 
+No Activity Tracked This Week
+```
+
+
+ Last Updated on 30/03/2026 23:05:22 UTC
 <!--END_SECTION:waka-->
