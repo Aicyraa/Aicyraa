@@ -16,6 +16,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SHOW_SHORT_INFO: "False"
           SHOW_LINES_OF_CODE: "False"
+          SHOW_TOTAL_CODE_TIME: "False"
           SHOW_PROFILE_VIEWS: "False"
-          TIMELINE: "False"
           SHOW_LOC_CHART: "False"
+          SHOW_UPDATED_DATA: "False"
+          SHOW_LANGUAGE_PER_REPO: "False"
+          SHOW_TIMEZONE: "False"
+          SHOW_LANGUAGES: "False"
+          TIMELINE: "False"
+          COMMIT_USERNAME: "Jee"
