@@ -25,5 +25,4 @@ jobs:
           SHOW_LANGUAGE: "True"
           SHOW_OS: "True"
           SHOW_EDITORS: "True"
-          TIMELINE: "False"
           COMMIT_USERNAME: "Jee"
