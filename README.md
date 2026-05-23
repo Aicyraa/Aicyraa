@@ -15,38 +15,6 @@
 </div>
 
 <!--START_SECTION:waka-->
-**I'm an Early 🐤** 
 
-```text
-🌞 Morning                281 commits         █████░░░░░░░░░░░░░░░░░░░░   21.24 % 
-🌆 Daytime                425 commits         ████████░░░░░░░░░░░░░░░░░   32.12 % 
-🌃 Evening                608 commits         ███████████░░░░░░░░░░░░░░   45.96 % 
-🌙 Night                  9 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.68 % 
-```
-📅 **I'm Most Productive on Monday** 
-
-```text
-Monday                   227 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.16 % 
-Tuesday                  140 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.58 % 
-Wednesday                198 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.97 % 
-Thursday                 176 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.30 % 
-Friday                   150 commits         ███░░░░░░░░░░░░░░░░░░░░░░   11.34 % 
-Saturday                 213 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.10 % 
-Sunday                   219 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.55 % 
-```
-
-
-📊 **This Week I Spent My Time On** 
-
-```text
-💬 Programming Languages: 
-JavaScript               8 hrs 22 mins       ████████████████░░░░░░░░░   64.59 % 
-Python                   3 hrs 14 mins       ██████░░░░░░░░░░░░░░░░░░░   25.03 % 
-CSS                      32 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   04.14 % 
-JSON                     29 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   03.84 % 
-Other                    14 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░   01.92 % 
-```
-
-
- Last Updated on 22/05/2026 20:18:58 UTC
+ Last Updated on 23/05/2026 19:44:23 UTC
 <!--END_SECTION:waka-->
