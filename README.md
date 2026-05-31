@@ -15,9 +15,9 @@
 </div>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-158%20hrs%207%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-162%20hrs%203%20mins-blue?style=flat)
 
-![Profile Views](http://img.shields.io/badge/Profile%20Views-5-blue?style=flat)
+![Profile Views](http://img.shields.io/badge/Profile%20Views-18-blue?style=flat)
 
 ![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-276.54%20thousand%20lines%20of%20code-blue?style=flat)
 
@@ -46,13 +46,13 @@ Sunday                   233 commits         ████░░░░░░░�
 
 ```text
 💬 Programming Languages: 
-JavaScript               9 hrs 6 mins        ██████████████░░░░░░░░░░░   56.07 % 
-Python                   5 hrs 1 min         ████████░░░░░░░░░░░░░░░░░   30.98 % 
-CSS                      1 hr 51 mins        ███░░░░░░░░░░░░░░░░░░░░░░   11.44 % 
-TOML                     8 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.84 % 
-JSON                     2 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.29 % 
+Python                   8 hrs 3 mins        █████████████░░░░░░░░░░░░   51.66 % 
+JavaScript               5 hrs 26 mins       █████████░░░░░░░░░░░░░░░░   34.86 % 
+CSS                      1 hr 48 mins        ███░░░░░░░░░░░░░░░░░░░░░░   11.60 % 
+TOML                     8 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.87 % 
+Text                     5 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.55 % 
 ```
 
 
- Last Updated on 30/05/2026 19:48:30 UTC
+ Last Updated on 31/05/2026 19:48:55 UTC
 <!--END_SECTION:waka-->
