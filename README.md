@@ -1,6 +1,6 @@
 <div>
   
-![Header](https://github.com/Aicyraa/Aicyraa/blob/main/assets/main-banner-readme.png?raw=true)
+![Header](./assets/main-banner-readme.png)
 
 </div>
 
