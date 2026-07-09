@@ -15,11 +15,6 @@
 </div>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-163%20hrs%2026%20mins-blue?style=flat)
-
-![Profile Views](http://img.shields.io/badge/Profile%20Views-5-blue?style=flat)
-
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-286.26%20thousand%20lines%20of%20code-blue?style=flat)
 
 **I'm an Early 🐤** 
 
@@ -48,6 +43,7 @@ Sunday                   238 commits         ⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀�
 💬 Programming Languages: 
 No Activity Tracked This Week
 ```
+![Code Time](http://img.shields.io/badge/Code%20Time-163%20hrs%2026%20mins-blue?style=flat) ![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-286.26%20thousand%20lines%20of%20code-blue?style=flat) ![Profile Views](http://img.shields.io/badge/Profile%20Views-5-blue?style=flat)
 
 
  Last Updated on 09/07/2026 05:05:16 UTC
