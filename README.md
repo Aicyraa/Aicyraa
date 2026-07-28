@@ -15,9 +15,11 @@
 </div>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-189%20hrs%2016%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-186%20hrs%2048%20mins-blue?style=flat)
 
-![Profile Views](http://img.shields.io/badge/Profile%20Views-12-blue?style=flat)
+![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-14%20hrs%2028%20mins-blue?style=flat)
+
+![Profile Views](http://img.shields.io/badge/Profile%20Views-11-blue?style=flat)
 
 ![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-307.71%20thousand%20lines%20of%20code-blue?style=flat)
 
@@ -53,6 +55,28 @@ HTML                     0 secs              ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀�
 JSON                     0 secs              ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   00.11 % 
 ```
 
+🤖 **AI Coding This Week** 
 
- Last Updated on 27/07/2026 02:31:09 UTC
+```text
+⏱ AI Coding Time: 1 hr 19 mins (22.85%)
+
+✍️ 25 lines written by AI, 1,279 lines written by hand (1.92% AI-written)
+
+🔤 74,970 Input Tokens, 1,652 Output Tokens
+
+💵 $0.25 Estimated AI Cost This Week
+
+🧠 2 AI Sessions, 7 AI Prompts
+
+Github-Copilot           40 lines            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   100.00 % 
+
+🔎 AI Coding Insights:
+🧑‍💻 Mostly Hands-On — 1.92% of written lines came from AI
+📝 Concise Prompter — average 44 characters per prompt
+🔁 Iterative Prompter — average 4 prompts per session
+🔍 Hands-On Reviewer — 98.12% of changed lines were hand-edited
+```
+
+
+ Last Updated on 28/07/2026 02:05:57 UTC
 <!--END_SECTION:waka-->
