@@ -28,4 +28,6 @@ jobs:
           SHOW_TIMEZONE: "False"
           COMMIT_USERNAME: "Jee"
           SYMBOL_VERSION: "2"
+          SHOW_MASKED_TIME: "False"
+          AI_CODING: "False"
          
