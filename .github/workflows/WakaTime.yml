@@ -14,20 +14,20 @@ jobs:
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SHOW_TITLE: true 
-          BLOCKS: -> 
-          SHOW_SHORT_INFO: true
-          SHOW_PROFILE_VIEWS: true
-          TIME_RANGE: last_30_days
-          SHOW_OS: false
-          SHOW_LANGUAGE: true
-          SHOW_EDITORS: false
-          SHOW_LANGUAGE_PER_REPO: false
-          SHOW_PROJECTS: false
-          SHOW_LOC_CHART: false
-          SHOW_TIMEZONE: false
+          SHOW_TITLE: "true" 
+          BLOCKS: "->" 
+          SHOW_SHORT_INFO: "true"
+          SHOW_PROFILE_VIEWS: "true"
+          TIME_RANGE: "last_30_days"
+          SHOW_OS: "false"
+          SHOW_LANGUAGE: "true"
+          SHOW_EDITORS: "false"
+          SHOW_LANGUAGE_PER_REPO: "false"
+          SHOW_PROJECTS: "false"
+          SHOW_LOC_CHART: "false"
+          SHOW_TIMEZONE: "false"
           COMMIT_USERNAME: Jee
-          SHOW_MASKED_TIME: false
-          SHOW_AI_CODE: false
-          SHOW_AI_STATS: false
+          SHOW_MASKED_TIME: "false"
+          SHOW_AI_CODE: "false"
+          SHOW_AI_STATS: "false"
          
