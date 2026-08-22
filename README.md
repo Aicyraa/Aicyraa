@@ -15,79 +15,21 @@
 </div>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-238%20hrs%2042%20mins-blue?style=flat)
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-26%20hrs%2032%20mins-blue?style=flat)
+```rust
+From: 23 March 2026 - To: 21 August 2026
 
-![Profile Views](http://img.shields.io/badge/Profile%20Views-0-blue?style=flat)
+Total Time: 238 hrs 42 mins
 
-**🐱 My GitHub Data** 
-
-> 📦 33.9 kB Used in GitHub's Storage 
- > 
-> 🏆 806 Contributions in the Year 2026
- > 
-> 🚫 Not Opted to Hire
- > 
-> 📜 48 Public Repositories 
- > 
-> 🔑 11 Private Repositories 
- > 
-**I'm an Early 🐤** 
-
-```text
-🌞 Morning                324 commits         █████░░░░░░░░░░░░░░░░░░░░   21.64 % 
-🌆 Daytime                494 commits         ████████░░░░░░░░░░░░░░░░░   33.00 % 
-🌃 Evening                668 commits         ███████████░░░░░░░░░░░░░░   44.62 % 
-🌙 Night                  11 commits          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.73 % 
-```
-📅 **I'm Most Productive on Sunday** 
-
-```text
-Monday                   238 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.90 % 
-Tuesday                  146 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.75 % 
-Wednesday                211 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.09 % 
-Thursday                 216 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.43 % 
-Friday                   198 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.23 % 
-Saturday                 237 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.83 % 
-Sunday                   251 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.77 % 
+JavaScript      98 hrs 40 mins  >>>>>>>>>>---------------   40.89 %
+TypeScript      50 hrs 46 mins  >>>>>--------------------   21.04 %
+Python          36 hrs 37 mins  >>>>---------------------   15.18 %
+CSS             19 hrs 26 mins  >>-----------------------   08.06 %
+Markdown        9 hrs 54 mins   >------------------------   04.11 %
+HTML            7 hrs 18 mins   >------------------------   03.03 %
+JSON            5 hrs 58 mins   >------------------------   02.48 %
+EJS             5 hrs 43 mins   >------------------------   02.37 %
+Other           2 hrs 36 mins   -------------------------   01.08 %
 ```
 
-
-📊 **This Week I Spent My Time On** 
-
-```text
-💬 Programming Languages: 
-TypeScript               8 hrs 41 mins       ████████████████░░░░░░░░░   64.99 % 
-EJS                      2 hrs 16 mins       ████░░░░░░░░░░░░░░░░░░░░░   17.05 % 
-JSON                     55 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   06.91 % 
-TSConfig                 26 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   03.29 % 
-Markdown                 20 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.61 % 
-```
-
-🤖 **AI Coding This Week** 
-
-```text
-⏱ AI Coding Time: 1 hr 9 mins (8.62%)
-
-✍️ 110 lines written by AI, 1,108 lines written by hand (9.03% AI-written)
-
-🔤 847,442 Input Tokens, 144,655 Output Tokens
-
-💵 $46.30 Estimated AI Cost This Week
-
-🧠 5 AI Sessions, 10 AI Prompts
-
-Deepseek                 126 lines           █████████████████████████   100.00 % 
-Opencode-Cli             0 lines             ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
-
-🔎 AI Coding Insights:
-🧑‍💻 Mostly Hands-On — 9.03% of written lines came from AI
-📄 Detailed Prompter — average 564 characters per prompt
-🔁 Iterative Prompter — average 2 prompts per session
-🔍 Hands-On Reviewer — 92.78% of changed lines were hand-edited
-```
-
-
- Last Updated on 22/08/2026 15:51:57 UTC
 <!--END_SECTION:waka-->
