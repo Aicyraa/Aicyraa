@@ -1,4 +1,4 @@
-"""Quiet, borderless profile graphics in the original lavender palette."""
+"""Profile layout: terminal and contributions, centered tools, muted blue/orange."""
 import base64
 import json
 import re
@@ -9,6 +9,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parent.parent
 NS = '{http://www.w3.org/2000/svg}'
 ET.register_namespace('', 'http://www.w3.org/2000/svg')
+INK, MUTED, BLUE, ORANGE = '#ced7e2', '#8e9eb2', '#91adc9', '#d9a078'
 
 
 def font_style():
@@ -23,55 +24,112 @@ def frame(height, body, width=620):
     return f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}"><style>{font_style()}</style>{body}</svg>'
 
 
+def text(x, y, value, size=12, color=INK, extra=''):
+    return f'<text x="{x}" y="{y}" font-size="{size}" fill="{color}" xml:space="preserve" {extra}>{escape(str(value))}</text>'
+
+
 def finish_svg(source):
-    """Show the final graphic immediately, including renderers without SMIL."""
+    """Resolve animation and apply the shared palette, including gradients."""
     root = ET.fromstring(source)
+    palette = {'#B7A9DE': BLUE, '#78A6C2': ORANGE, '#8FBF9F': '#a2b4c5',
+               '#E7E3DC': INK, '#8B877E': MUTED, '#555': MUTED,
+               '#2A2D33': '#243247', '#1A1C23': '#111b2a'}
     for parent in root.iter():
         for child in list(parent):
             if child.tag == NS + 'animate':
                 if child.get('to') is not None:
                     parent.set(child.get('attributeName'), child.get('to'))
                 parent.remove(child)
-    # Keep the original palette, with enough contrast on GitHub's dark theme.
-    for node in root.iter():
-        if node.get('fill') in ('#555', '#8B877E'):
-            node.set('fill', '#9B9AA3')
+        for key, value in list(parent.attrib.items()):
+            if value in palette:
+                parent.set(key, palette[value])
     return ET.tostring(root, encoding='unicode')
 
 
+def profile_panel(stats_svg):
+    body = '<rect x=".5" y=".5" width="959" height="325" rx="12" fill="none" stroke="#2a3b51"/>'
+    body += '<path d="M1 40H959M317 40V325" stroke="#2a3b51"/>'
+    for x in [22,35,48]:
+        body += f'<circle cx="{x}" cy="21" r="3" fill="#52657c"/>'
+    body += text(168,25,'~/profile',10,MUTED,'text-anchor="middle"')
+    body += text(342,25,'contributions',10,MUTED)
+    body += text(935,25,'github / last year',9,MUTED,'text-anchor="end"')
+    body += text(24,73,'$ whoami',12,ORANGE)
+    body += text(24,97,'Jee Daguman',13,INK)
+    body += text(24,135,'$ cat profile.json',12,ORANGE)
+    lines = [('{',MUTED), ('  "handle": "aicyraa",',INK), ('  "based_in": "Philippines",',INK),
+             ('  "current focus": [',INK), ('    "backend", "agentic"',INK),
+             ('  ]',INK), ('}',MUTED)]
+    for i,(line,color) in enumerate(lines):
+        body += text(24,160+i*20,line,11,color)
+    body += text(24,306,'$ ',12,ORANGE)
+    body += '<rect x="39" y="295" width="7" height="13" fill="#91adc9" opacity=".75"/>'
+    root = ET.fromstring(stats_svg)
+    root.set('x','331'); root.set('y','49'); root.set('width','610'); root.set('height','256')
+    root.insert(0, ET.Element(NS+'title'))
+    root[0].text = 'Public GitHub contributions over the last year'
+    body += ET.tostring(root,encoding='unicode')
+    return frame(326,body,960)
+
+
+def about_panel():
+    body = '<rect x=".5" y=".5" width="959" height="337" rx="12" fill="none" stroke="#2a3b51"/>'
+    body += '<path d="M1 40H959" stroke="#2a3b51"/>'
+    for x in [22, 35, 48]:
+        body += f'<circle cx="{x}" cy="21" r="3" fill="#52657c"/>'
+    body += text(480, 25, '~/about', 10, MUTED, 'text-anchor="middle"')
+    body += text(24, 73, '$ cat about.txt', 12, ORANGE)
+    body += text(24, 100, 'A builder', 14, BLUE, 'font-weight="700"')
+    body += text(24, 123, 'Based in the Philippines. I build useful software around everyday problems.', 12)
+    body += text(24, 163, '$ cat work.txt', 12, ORANGE)
+    body += text(24, 190, 'I work with React and TypeScript on web applications, alongside Python and Java.', 12)
+    body += text(24, 212, 'My projects span grocery budgeting, student case management, data structures, and algorithms.', 12)
+    body += text(24, 252, '$ cat focus.txt', 12, ORANGE)
+    body += text(24, 279, 'My current focus is backend development and agentic systems.', 12)
+    body += text(24, 301, 'I’m exploring how APIs, data workflows, and tool-using agents fit together in practical applications.', 12)
+    return frame(338, body, 960)
+
+
 def write_static():
-    title = frame(130, '<text x="310" y="66" text-anchor="middle" font-size="45" font-weight="700" letter-spacing="5" fill="#B7A9DE">aicyraa</text><text x="310" y="99" text-anchor="middle" font-size="11" letter-spacing="2" fill="#9B9AA3">Jee Daguman</text>')
-    (ROOT / 'aicyraa.svg').write_text(title)
-    for name, label in [('about','about'), ('projects','selected work'), ('stack','tools I use'), ('stats','a little more in numbers')]:
-        length = 18 + len(label) * 8
-        body = f'<text x="0" y="28" font-size="11" letter-spacing="2" fill="#B7A9DE">{label}</text><path d="M{length+20}24H620" stroke="#30323c" stroke-width="1"/>'
-        (ROOT / f'hd-{name}.svg').write_text(frame(48, body))
-    # Original monochrome logos, arranged into a more compact 6 × 2 grid.
-    source = (ROOT / 'assets/stack-reference.svg').read_text()
-    groups = re.findall(r'<g[^>]*>\s*(<path[^>]+/>)\s*</g>\s*<text[^>]*>([^<]+)</text>', source)
-    paths = {label: path for path, label in groups}
-    labels = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'Express', 'Python', 'Java', 'Git', 'GitHub', 'Vite']
+    (ROOT/'about-panel.svg').write_text(about_panel(), encoding='utf-8')
+    for name,label in [('about','about'), ('stack','tools I use'), ('stats','languages & streaks')]:
+        body = '<path d="M100 27H350M610 27H860" stroke="#2a3b51"/>'
+        body += text(480,31,label,11,BLUE,'text-anchor="middle" letter-spacing="1.5"')
+        (ROOT/f'hd-{name}.svg').write_text(frame(54,body,960))
+    source = (ROOT/'assets/stack-reference.svg').read_text()
+    groups = re.findall(r'<g[^>]*>\s*(<path[^>]+/>)\s*</g>\s*<text[^>]*>([^<]+)</text>',source)
+    paths = {label:path for path,label in groups}
+    labels = ['HTML','CSS','JavaScript','TypeScript','React','Node.js','Express','Python','Java','Git',
+              'GitHub','Vite','Prisma','Neon','Supabase','Vercel','Vitest','Jest','Bruno','Postman']
     body = ''
-    for i, label in enumerate(labels):
-        x, y = (i % 6) * (620 / 6) + 620 / 12, 37 + (i // 6) * 96
-        if label == 'Vite':
-            icon = '<path d="M2 3L12 22 22 3 12 5Z" fill="#92939c"/><path d="M13 1L7 12 12 11 10 18 17 8 12 9Z" fill="#B7A9DE"/>'
+    for i,label in enumerate(labels):
+        x,y = 84+(i%5)*168, 33+(i//5)*88
+        local = ROOT/'assets/icons'/f'{label.lower()}.svg'
+        if local.is_file():
+            icon_root = ET.fromstring(local.read_text())
+            # Keep the source viewBox: logos remain correct if an upstream mark changes size.
+            icon_root.set('x',str(x-17)); icon_root.set('y',str(y-17))
+            icon_root.set('width','34'); icon_root.set('height','34')
+            icon_root.set('fill','#9aaabd')
+            icon = ET.tostring(icon_root,encoding='unicode')
         else:
-            icon = paths[label].replace('#888888', '#92939c')
-        body += f'<g transform="translate({x-18:.2f},{y-18}) scale(1.5)">{icon}</g>'
-        body += f'<text x="{x:.2f}" y="{y+39}" text-anchor="middle" font-size="10" fill="#9B9AA3">{escape(label)}</text>'
-    (ROOT / 'stack-icons.svg').write_text(frame(208, body))
+            path = paths[label].replace('#888888','#9aaabd')
+            icon = f'<g transform="translate({x-17},{y-17}) scale({34/24})">{path}</g>'
+        body += icon + text(x,y+38,label,10,MUTED,'text-anchor="middle"')
+    (ROOT/'stack-icons.svg').write_text(frame(350,body,840))
 
 
-def render_saved():
+def render_all(data):
     from generate_stats import generate_stats_svg
     from generate_streak import generate_streak_svg
     from generate_langs import generate_langs_svg
-    data = json.loads((ROOT / 'scripts/data.json').read_text())
     write_static()
-    for name, render in [('stats',generate_stats_svg), ('streak',generate_streak_svg), ('langs',generate_langs_svg)]:
-        (ROOT / f'{name}.svg').write_text(finish_svg(render(data)), encoding='utf-8')
+    stats = finish_svg(generate_stats_svg(data))
+    (ROOT/'stats.svg').write_text(stats,encoding='utf-8')
+    (ROOT/'profile-panel.svg').write_text(profile_panel(stats),encoding='utf-8')
+    for name,render in [('streak',generate_streak_svg), ('langs',generate_langs_svg)]:
+        (ROOT/f'{name}.svg').write_text(finish_svg(render(data)),encoding='utf-8')
 
 
 if __name__ == '__main__':
-    render_saved()
+    render_all(json.loads((ROOT/'scripts/data.json').read_text()))

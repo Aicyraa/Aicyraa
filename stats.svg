@@ -19,37 +19,37 @@
     
 </style>
 <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
-  <stop offset="0%" stop-color="#B7A9DE" stop-opacity="0.35" />
-  <stop offset="100%" stop-color="#B7A9DE" stop-opacity="0.0" />
+  <stop offset="0%" stop-color="#91adc9" stop-opacity="0.35" />
+  <stop offset="100%" stop-color="#91adc9" stop-opacity="0.0" />
 </linearGradient>
 </defs>
 
   
   
   <g transform="translate(20, 10)">
-    <g opacity="1"><text x="0" y="45" class="b" font-size="44" fill="#E7E3DC" letter-spacing="-0.5">2034</text>
-      <text x="2" y="65" font-size="11" fill="#9B9AA3" letter-spacing="0.2">contributions in the last year</text>
+    <g opacity="1"><text x="0" y="45" class="b" font-size="44" fill="#ced7e2" letter-spacing="-0.5">2034</text>
+      <text x="2" y="65" font-size="11" fill="#8e9eb2" letter-spacing="0.2">contributions in the last year</text>
     </g>
   </g>
 
   
   <g opacity="1" transform="translate(0, 10)"><g transform="translate(420, 30)">
-      <text x="35" y="0" text-anchor="middle" class="b" font-size="24" fill="#B7A9DE">246</text>
-      <text x="35" y="16" text-anchor="middle" font-size="9" fill="#9B9AA3" text-transform="uppercase" letter-spacing="1">Active Days</text>
+      <text x="35" y="0" text-anchor="middle" class="b" font-size="24" fill="#91adc9">246</text>
+      <text x="35" y="16" text-anchor="middle" font-size="9" fill="#8e9eb2" text-transform="uppercase" letter-spacing="1">Active Days</text>
     </g>
     
     <g transform="translate(520, 30)">
-      <text x="35" y="0" text-anchor="middle" class="b" font-size="24" fill="#78A6C2">416</text>
-      <text x="35" y="16" text-anchor="middle" font-size="9" fill="#9B9AA3" text-transform="uppercase" letter-spacing="1">Best Week</text>
+      <text x="35" y="0" text-anchor="middle" class="b" font-size="24" fill="#d9a078">416</text>
+      <text x="35" y="16" text-anchor="middle" font-size="9" fill="#8e9eb2" text-transform="uppercase" letter-spacing="1">Best Week</text>
     </g>
   </g>
 
   
   <g transform="translate(0, 100)">
     
-    <g opacity="0.3"><line x1="20" y1="0" x2="600" y2="0" stroke="#2A2D33" stroke-width="0.5" stroke-dasharray="2 4" />
-      <line x1="20" y1="50.0" x2="600" y2="50.0" stroke="#2A2D33" stroke-width="0.5" stroke-dasharray="2 4" />
-      <line x1="20" y1="100" x2="600" y2="100" stroke="#2A2D33" stroke-width="1" />
+    <g opacity="0.3"><line x1="20" y1="0" x2="600" y2="0" stroke="#243247" stroke-width="0.5" stroke-dasharray="2 4" />
+      <line x1="20" y1="50.0" x2="600" y2="50.0" stroke="#243247" stroke-width="0.5" stroke-dasharray="2 4" />
+      <line x1="20" y1="100" x2="600" y2="100" stroke="#243247" stroke-width="1" />
     </g>
 
     
@@ -57,35 +57,35 @@
       </path>
 
     
-    <path d="M 20.0 95.2 C 22.2 95.2, 26.7 95.2, 31.2 95.2 C 35.7 95.8, 37.8 97.4, 42.3 98.1 C 46.8 98.6, 49.0 98.6, 53.5 98.6 C 58.0 98.6, 60.1 98.3, 64.6 98.3 C 69.1 98.6, 71.3 99.7, 75.8 100.0 C 80.3 100.0, 82.4 100.0, 86.9 99.8 C 91.4 99.3, 93.6 98.3, 98.1 97.4 C 102.6 96.5, 104.7 97.0, 109.2 95.4 C 113.7 93.8, 115.9 90.8, 120.4 89.2 C 124.9 87.6, 127.0 88.0, 131.5 87.5 C 136.0 87.0, 138.2 86.5, 142.7 86.5 C 147.2 87.1, 149.3 88.3, 153.8 90.4 C 158.3 92.5, 160.5 96.2, 165.0 96.9 C 169.5 96.9, 171.7 95.2, 176.2 93.8 C 180.7 92.4, 182.8 91.4, 187.3 89.7 C 191.8 88.0, 194.0 85.1, 198.5 85.1 C 203.0 86.1, 205.1 93.1, 209.6 94.5 C 214.1 94.5, 216.3 92.5, 220.8 92.1 C 225.3 92.1, 227.4 92.1, 231.9 92.3 C 236.4 92.5, 238.6 93.3, 243.1 93.3 C 247.6 93.3, 249.7 92.8, 254.2 92.1 C 258.7 91.4, 260.9 89.9, 265.4 89.9 C 269.9 90.4, 272.0 93.6, 276.5 94.5 C 281.0 94.5, 283.2 94.5, 287.7 94.5 C 292.2 95.0, 294.3 96.8, 298.8 96.9 C 303.3 96.9, 305.5 95.7, 310.0 95.2 C 314.5 94.7, 316.7 94.2, 321.2 94.2 C 325.7 94.2, 327.8 94.5, 332.3 95.0 C 336.8 95.5, 339.0 96.9, 343.5 96.9 C 348.0 96.7, 350.1 94.0, 354.6 94.0 C 359.1 94.5, 361.3 98.6, 365.8 99.5 C 370.3 99.5, 372.4 99.1, 376.9 98.6 C 381.4 98.1, 383.6 96.9, 388.1 96.9 C 392.6 97.1, 394.7 99.1, 399.2 99.5 C 403.7 99.5, 405.9 99.5, 410.4 98.8 C 414.9 98.1, 417.0 96.2, 421.5 95.9 C 426.0 95.9, 428.2 96.6, 432.7 97.1 C 437.2 97.6, 439.3 98.0, 443.8 98.6 C 448.3 99.2, 450.5 100.0, 455.0 100.0 C 459.5 99.5, 461.7 97.0, 466.2 96.2 C 470.7 96.2, 472.8 96.2, 477.3 96.2 C 481.8 95.8, 484.0 94.2, 488.5 94.2 C 493.0 94.2, 495.1 95.4, 499.6 96.2 C 504.1 97.0, 506.3 98.0, 510.8 98.3 C 515.3 98.3, 517.4 98.3, 521.9 97.8 C 526.4 94.9, 528.6 86.0, 533.1 83.7 C 537.6 83.7, 539.7 84.6, 544.2 86.5 C 548.7 88.4, 550.9 90.8, 555.4 93.0 C 559.9 95.2, 562.0 97.4, 566.5 97.4 C 571.0 86.1, 573.2 56.0, 577.7 36.5 C 582.2 17.0, 584.3 0.0, 588.8 0.0 C 593.3 0.3, 597.8 30.6, 600.0 38.2" fill="none" stroke="#B7A9DE" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="0">
+    <path d="M 20.0 95.2 C 22.2 95.2, 26.7 95.2, 31.2 95.2 C 35.7 95.8, 37.8 97.4, 42.3 98.1 C 46.8 98.6, 49.0 98.6, 53.5 98.6 C 58.0 98.6, 60.1 98.3, 64.6 98.3 C 69.1 98.6, 71.3 99.7, 75.8 100.0 C 80.3 100.0, 82.4 100.0, 86.9 99.8 C 91.4 99.3, 93.6 98.3, 98.1 97.4 C 102.6 96.5, 104.7 97.0, 109.2 95.4 C 113.7 93.8, 115.9 90.8, 120.4 89.2 C 124.9 87.6, 127.0 88.0, 131.5 87.5 C 136.0 87.0, 138.2 86.5, 142.7 86.5 C 147.2 87.1, 149.3 88.3, 153.8 90.4 C 158.3 92.5, 160.5 96.2, 165.0 96.9 C 169.5 96.9, 171.7 95.2, 176.2 93.8 C 180.7 92.4, 182.8 91.4, 187.3 89.7 C 191.8 88.0, 194.0 85.1, 198.5 85.1 C 203.0 86.1, 205.1 93.1, 209.6 94.5 C 214.1 94.5, 216.3 92.5, 220.8 92.1 C 225.3 92.1, 227.4 92.1, 231.9 92.3 C 236.4 92.5, 238.6 93.3, 243.1 93.3 C 247.6 93.3, 249.7 92.8, 254.2 92.1 C 258.7 91.4, 260.9 89.9, 265.4 89.9 C 269.9 90.4, 272.0 93.6, 276.5 94.5 C 281.0 94.5, 283.2 94.5, 287.7 94.5 C 292.2 95.0, 294.3 96.8, 298.8 96.9 C 303.3 96.9, 305.5 95.7, 310.0 95.2 C 314.5 94.7, 316.7 94.2, 321.2 94.2 C 325.7 94.2, 327.8 94.5, 332.3 95.0 C 336.8 95.5, 339.0 96.9, 343.5 96.9 C 348.0 96.7, 350.1 94.0, 354.6 94.0 C 359.1 94.5, 361.3 98.6, 365.8 99.5 C 370.3 99.5, 372.4 99.1, 376.9 98.6 C 381.4 98.1, 383.6 96.9, 388.1 96.9 C 392.6 97.1, 394.7 99.1, 399.2 99.5 C 403.7 99.5, 405.9 99.5, 410.4 98.8 C 414.9 98.1, 417.0 96.2, 421.5 95.9 C 426.0 95.9, 428.2 96.6, 432.7 97.1 C 437.2 97.6, 439.3 98.0, 443.8 98.6 C 448.3 99.2, 450.5 100.0, 455.0 100.0 C 459.5 99.5, 461.7 97.0, 466.2 96.2 C 470.7 96.2, 472.8 96.2, 477.3 96.2 C 481.8 95.8, 484.0 94.2, 488.5 94.2 C 493.0 94.2, 495.1 95.4, 499.6 96.2 C 504.1 97.0, 506.3 98.0, 510.8 98.3 C 515.3 98.3, 517.4 98.3, 521.9 97.8 C 526.4 94.9, 528.6 86.0, 533.1 83.7 C 537.6 83.7, 539.7 84.6, 544.2 86.5 C 548.7 88.4, 550.9 90.8, 555.4 93.0 C 559.9 95.2, 562.0 97.4, 566.5 97.4 C 571.0 86.1, 573.2 56.0, 577.7 36.5 C 582.2 17.0, 584.3 0.0, 588.8 0.0 C 593.3 0.3, 597.8 30.6, 600.0 38.2" fill="none" stroke="#91adc9" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="0">
       </path>
 
     
-    <g opacity="1"><circle cx="588.8" cy="0.0" r="3.5" fill="#1A1C23" stroke="#B7A9DE" stroke-width="1.5" opacity="0.9" />
-      <text x="588.8" y="-8.0" text-anchor="middle" font-size="9" fill="#B7A9DE" class="b">416</text>
-      <circle cx="533.1" cy="83.7" r="3.5" fill="#1A1C23" stroke="#B7A9DE" stroke-width="1.5" opacity="0.9" />
-      <text x="533.1" y="75.7" text-anchor="middle" font-size="9" fill="#B7A9DE" class="b">68</text>
+    <g opacity="1"><circle cx="588.8" cy="0.0" r="3.5" fill="#111b2a" stroke="#91adc9" stroke-width="1.5" opacity="0.9" />
+      <text x="588.8" y="-8.0" text-anchor="middle" font-size="9" fill="#91adc9" class="b">416</text>
+      <circle cx="533.1" cy="83.7" r="3.5" fill="#111b2a" stroke="#91adc9" stroke-width="1.5" opacity="0.9" />
+      <text x="533.1" y="75.7" text-anchor="middle" font-size="9" fill="#91adc9" class="b">68</text>
     </g>
 
     
-    <g opacity="1"><text x="20.0" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">Oct</text>
-      <text x="86.9" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">Dec</text>
-      <text x="131.5" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">Jan</text>
-      <text x="176.2" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">Feb</text>
-      <text x="220.8" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">Mar</text>
-      <text x="276.5" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">Apr</text>
-      <text x="321.2" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">May</text>
-      <text x="376.9" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">Jun</text>
-      <text x="421.5" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">Jul</text>
-      <text x="466.2" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">Aug</text>
-      <text x="521.9" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">Sep</text>
-      <text x="566.5" y="120" text-anchor="middle" font-size="9" fill="#9B9AA3">Oct</text>
+    <g opacity="1"><text x="20.0" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">Oct</text>
+      <text x="86.9" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">Dec</text>
+      <text x="131.5" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">Jan</text>
+      <text x="176.2" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">Feb</text>
+      <text x="220.8" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">Mar</text>
+      <text x="276.5" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">Apr</text>
+      <text x="321.2" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">May</text>
+      <text x="376.9" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">Jun</text>
+      <text x="421.5" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">Jul</text>
+      <text x="466.2" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">Aug</text>
+      <text x="521.9" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">Sep</text>
+      <text x="566.5" y="120" text-anchor="middle" font-size="9" fill="#8e9eb2">Oct</text>
     </g>
   </g>
 
   
   <g transform="translate(310, 245)" opacity="1"><text text-anchor="middle" font-size="10" letter-spacing="0.5">
-      <tspan class="b" fill="#8FBF9F">49</tspan> <tspan fill="#9B9AA3">PUBLIC REPOSITORIES</tspan>
+      <tspan class="b" fill="#a2b4c5">49</tspan> <tspan fill="#8e9eb2">PUBLIC REPOSITORIES</tspan>
     </text>
   </g>
 </svg>

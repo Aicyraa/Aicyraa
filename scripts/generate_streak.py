@@ -33,7 +33,7 @@ text {{ font-family: 'JBM Medium', ui-monospace, monospace; }}
     current_streak = data.get("current_streak", 0)
     longest_streak = data.get("longest_streak", 0)
     
-    svg_content = f'''<svg width="620" height="96" viewBox="0 0 620 96" xmlns="http://www.w3.org/2000/svg">
+    svg_content = f'''<svg width="620" height="84" viewBox="0 0 620 84" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <style>
 {font_style}
@@ -41,15 +41,13 @@ text {{ font-family: 'JBM Medium', ui-monospace, monospace; }}
 </defs>
 
   <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.05s" dur="0.5s" fill="freeze" />
-    <text x="0" y="34" class="b" font-size="30" fill="#E7E3DC">{current_streak}</text>
-    <text x="0" y="54" font-size="11" fill="#8B877E">current streak</text>
+    <text text-anchor="middle" x="155" y="34" class="b" font-size="30" fill="#E7E3DC">{current_streak}</text>
+    <text text-anchor="middle" x="155" y="54" font-size="11" fill="#8B877E">current streak</text>
   </g>
   <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.5s" fill="freeze" />
-    <text x="310.0" y="34" class="b" font-size="30" fill="#B7A9DE">{longest_streak}</text>
-    <text x="310.0" y="54" font-size="11" fill="#8B877E">longest streak &#183; days</text>
+    <text text-anchor="middle" x="465" y="34" class="b" font-size="30" fill="#B7A9DE">{longest_streak}</text>
+    <text text-anchor="middle" x="465" y="54" font-size="11" fill="#8B877E">longest streak &#183; days</text>
   </g>
-  <line x1="0" y1="72" x2="620" y2="72" stroke="#2A2D33" stroke-width="1"
-        stroke-dasharray="620" stroke-dashoffset="620"><animate attributeName="stroke-dashoffset" from="620" to="0" begin="0.3s" dur="0.9s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/></line>
 </svg>
 '''
     return svg_content
