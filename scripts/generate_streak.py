@@ -45,7 +45,7 @@ text {{ font-family: 'JBM Medium', ui-monospace, monospace; }}
     <text text-anchor="middle" x="155" y="54" font-size="11" fill="#8B877E">current streak</text>
   </g>
   <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.5s" fill="freeze" />
-    <text text-anchor="middle" x="465" y="34" class="b" font-size="30" fill="#B7A9DE">{longest_streak}</text>
+    <text text-anchor="middle" x="465" y="34" class="b" font-size="30" fill="#78A6C2">{longest_streak}</text>
     <text text-anchor="middle" x="465" y="54" font-size="11" fill="#8B877E">longest streak &#183; days</text>
   </g>
 </svg>

@@ -39,7 +39,7 @@
     </g>
     
     <g transform="translate(520, 30)">
-      <text x="35" y="0" text-anchor="middle" class="b" font-size="24" fill="#d1d1d1">416</text>
+      <text x="35" y="0" text-anchor="middle" class="b" font-size="24" fill="#d9a078">416</text>
       <text x="35" y="16" text-anchor="middle" font-size="9" fill="#969696" text-transform="uppercase" letter-spacing="1">Best Week</text>
     </g>
   </g>

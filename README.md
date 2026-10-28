@@ -8,21 +8,15 @@
 
 <br/>
 
-<img src="./hd-stack.svg" width="960" alt="tools I use"/>
-
-<img src="./stack-icons.svg" width="840" alt="HTML, CSS, JavaScript, TypeScript, React, Node.js, Express, Python, Java, Git, GitHub, Vite, Prisma, Neon, Supabase, Vercel, Vitest, Jest, Bruno, and Postman"/>
+<img src="./tools-panel.svg" width="960" alt="Tools I use: HTML, CSS, JavaScript, TypeScript, React, Node.js, Express, Python, Java, Git, GitHub, Vite, Prisma, Neon, Supabase, Vercel, Vitest, Jest, Bruno, and Postman. Centered monochrome logos in a terminal container."/>
 
 <br/>
 
-<img src="./hd-stats.svg" width="960" alt="languages and streaks"/>
-
-<img src="./streak.svg" width="760" alt="Current contribution streak and longest streak in the last year"/>
-
-<img src="./langs.svg" width="760" alt="Language distribution by bytes across public, non-fork repositories"/>
+<img src="./analytics-panel.svg" width="960" alt="Terminal analytics: centered current and longest contribution streaks, followed by language distribution across public, non-fork repositories."/>
 
 <br/>
 
-<img src="./skyline.svg" width="960" alt="Animated 3D skyline of daily GitHub contributions over the last year. Gray buildings rise from left to right, with the busiest day highlighted in silver."/>
+<img src="./skyline.svg" width="960" alt="Animated 3D skyline of daily GitHub contributions over the last year. Gray buildings rise from left to right, with the busiest day highlighted in muted orange."/>
 
 <sub>Refreshed daily </sub>
 

@@ -1,4 +1,4 @@
-"""Profile layout: terminal and contributions, centered tools, neutral grayscale."""
+"""Profile layout: terminal and contributions, centered tools, gray with muted orange accents."""
 import base64
 import json
 import re
@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parent.parent
 NS = '{http://www.w3.org/2000/svg}'
 ET.register_namespace('', 'http://www.w3.org/2000/svg')
-INK, MUTED, ACCENT, HIGHLIGHT = '#d4d4d4', '#969696', '#b4b4b4', '#d1d1d1'
+INK, MUTED, ACCENT, HIGHLIGHT = '#d4d4d4', '#969696', '#b4b4b4', '#d9a078'
 
 
 def font_style():
@@ -110,6 +110,38 @@ def about_panel():
     return frame(392, body, 960)
 
 
+
+def terminal_body(height, title):
+    body = f'<rect x=".5" y=".5" width="959" height="{height-1}" rx="12" fill="none" stroke="#393939"/>'
+    body += '<path d="M1 40H959" stroke="#393939"/>'
+    for x in [22, 35, 48]:
+        body += f'<circle cx="{x}" cy="21" r="3" fill="#626262"/>'
+    return body + text(480, 25, title, 10, MUTED, 'text-anchor="middle"')
+
+
+def embed_svg(source, x, y, width, height):
+    root = ET.fromstring(source)
+    for key, value in [('x',x), ('y',y), ('width',width), ('height',height)]:
+        root.set(key, str(value))
+    return ET.tostring(root, encoding='unicode')
+
+
+def tools_panel(source):
+    body = terminal_body(470, '~/tools')
+    body += text(24, 74, '$ ls tools/', 12, HIGHLIGHT)
+    body += embed_svg(source, 60, 100, 840, 350)
+    return frame(470, body, 960)
+
+
+def analytics_panel(streak, languages):
+    body = terminal_body(450, '~/stats')
+    body += text(24, 74, '$ github streaks', 12, HIGHLIGHT)
+    body += embed_svg(streak, 100, 87, 760, 103)
+    body += text(24, 207, '$ github languages --by bytes', 12, HIGHLIGHT)
+    body += embed_svg(languages, 100, 231, 760, 208)
+    return frame(450, body, 960)
+
+
 def write_static():
     (ROOT/'about-panel.svg').write_text(about_panel(), encoding='utf-8')
     for name,label in [('about','about'), ('stack','tools I use'), ('stats','languages & streaks')]:
@@ -136,7 +168,9 @@ def write_static():
             path = paths[label].replace('#888888','#aaaaaa')
             icon = f'<g transform="translate({x-17},{y-17}) scale({34/24})">{path}</g>'
         body += icon + text(x,y+38,label,10,MUTED,'text-anchor="middle"')
-    (ROOT/'stack-icons.svg').write_text(frame(350,body,840))
+    tools = frame(350,body,840)
+    (ROOT/'stack-icons.svg').write_text(tools)
+    (ROOT/'tools-panel.svg').write_text(tools_panel(tools), encoding='utf-8')
 
 
 def render_all(data):
@@ -150,8 +184,11 @@ def render_all(data):
     stats = finish_svg(generate_stats_svg(data))
     (ROOT/'stats.svg').write_text(stats,encoding='utf-8')
     (ROOT/'profile-panel.svg').write_text(profile_panel(stats),encoding='utf-8')
-    for name,render in [('streak',generate_streak_svg), ('langs',generate_langs_svg)]:
-        (ROOT/f'{name}.svg').write_text(finish_svg(render(data)),encoding='utf-8')
+    streak = finish_svg(generate_streak_svg(data))
+    languages = finish_svg(generate_langs_svg(data))
+    (ROOT/'streak.svg').write_text(streak, encoding='utf-8')
+    (ROOT/'langs.svg').write_text(languages, encoding='utf-8')
+    (ROOT/'analytics-panel.svg').write_text(analytics_panel(streak, languages), encoding='utf-8')
 
 
 if __name__ == '__main__':
