@@ -22,7 +22,7 @@
 
 <br/>
 
-<img src="./skyline.svg" width="960" alt="Animated 3D skyline of daily GitHub contributions over the last year. Blue buildings rise from left to right, with the busiest day highlighted in orange."/>
+<img src="./skyline.svg" width="960" alt="Animated 3D skyline of daily GitHub contributions over the last year. Gray buildings rise from left to right, with the busiest day highlighted in silver."/>
 
 <sub>Refreshed daily </sub>
 

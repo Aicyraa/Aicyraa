@@ -2,7 +2,7 @@
 from datetime import date, timedelta
 from math import sqrt
 from html import escape
-from profile_design import frame, text, BLUE, ORANGE, MUTED, INK
+from profile_design import frame, text, ACCENT, HIGHLIGHT, MUTED, INK
 
 
 def shade(color, factor):
@@ -12,8 +12,8 @@ def shade(color, factor):
 def generate_skyline_svg(data):
     days = sorted(data.get('daily_contributions', []), key=lambda day: day['date'])
     body = '<title>Animated skyline of daily GitHub contributions</title>'
-    body += '<rect x=".5" y=".5" width="959" height="415" rx="12" fill="none" stroke="#2a3b51"/>'
-    body += text(24, 29, 'contribution skyline', 11, BLUE)
+    body += '<rect x=".5" y=".5" width="959" height="415" rx="12" fill="none" stroke="#393939"/>'
+    body += text(24, 29, 'contribution skyline', 11, ACCENT)
     if not days:
         body += text(480, 215, 'Daily contributions will appear after the next successful refresh.', 12, MUTED, 'text-anchor="middle"')
         return frame(416, body, 960)
@@ -39,7 +39,7 @@ def generate_skyline_svg(data):
         css += f'@keyframes rise-{week}{{0%,{begin:.4f}%{{transform:scaleY(0)}}{end:.4f}%,99.99%{{transform:scaleY(1)}}100%{{transform:scaleY(0)}}}}\n'
     css += '@media(prefers-reduced-motion:reduce){.building,.city,.peak-note{animation:none!important;transform:none!important;opacity:1!important}}'
     body += f'<style>{css}</style>'
-    body += '<path d="M43 333H852L894 291H85Z" fill="#172333" fill-opacity=".3"/>'
+    body += '<path d="M43 333H852L894 291H85Z" fill="#232323" fill-opacity=".3"/>'
     buildings = []
     peak_point = None
     for day in days:
@@ -49,10 +49,10 @@ def generate_skyline_svg(data):
         x, y = 48+week*step+(6-row)*6, 330-(6-row)*6
         count = day['count']
         height = 2+sqrt(count/max(1,peak_count))*170 if count else 1
-        color = ['#243247','#415a73','#597996','#7597b6','#91adc9'][max(0,min(4,day['level']))]
+        color = ['#303030','#515151','#737373','#969696','#b4b4b4'][max(0,min(4,day['level']))]
         is_peak = day is peak and count>0
         if is_peak:
-            color = ORANGE
+            color = HIGHLIGHT
             peak_point = (x+6, y-height-4)
         w,d=11.5,5
         faces = f'<path d="M0 {-height:.2f}H{w}V0H0Z" fill="{color}"/>'
@@ -66,9 +66,9 @@ def generate_skyline_svg(data):
         px,py=peak_point
         label_x=max(300,min(710,px+13))
         body += '<g class="peak-note">'
-        body += f'<path d="M{px:.2f} {py:.2f}V107H{label_x}" stroke="{ORANGE}" stroke-opacity=".7" fill="none"/>'
-        body += f'<circle cx="{px:.2f}" cy="{py:.2f}" r="2.5" fill="{ORANGE}"/>'
-        body += text(label_x, 76, f'{peak_count} contributions', 18, ORANGE)
+        body += f'<path d="M{px:.2f} {py:.2f}V107H{label_x}" stroke="{HIGHLIGHT}" stroke-opacity=".7" fill="none"/>'
+        body += f'<circle cx="{px:.2f}" cy="{py:.2f}" r="2.5" fill="{HIGHLIGHT}"/>'
+        body += text(label_x, 76, f'{peak_count} contributions', 18, HIGHLIGHT)
         body += text(label_x, 95, f"{date.fromisoformat(peak['date']):%d %b %Y} / best day", 9, MUTED)
         body += '</g>'
     last_label = -100
