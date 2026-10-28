@@ -1,13 +1,13 @@
 {
   "username": "Aicyraa",
-  "updated_at": "2026-10-28T09:17:06.724457+00:00",
-  "total_contributions": 2033,
+  "updated_at": "2026-10-28T11:35:14.927974+00:00",
+  "total_contributions": 2034,
   "active_days": 246,
   "best_week": 416,
   "current_streak": 66,
   "longest_streak": 66,
-  "total_commits": null,
-  "total_prs": null,
+  "total_commits": 1889,
+  "total_prs": 31,
   "public_repos": 49,
   "weekly_contributions": [
     20,
@@ -62,7 +62,7 @@
     11,
     264,
     416,
-    256
+    257
   ],
   "month_labels": [
     {
@@ -122,37 +122,37 @@
     {
       "name": "TypeScript",
       "bytes": 3245803,
-      "pct": 72.05,
+      "pct": 71.64,
       "color": "#B7A9DE"
     },
     {
       "name": "Python",
-      "bytes": 420533,
-      "pct": 9.34,
+      "bytes": 446408,
+      "pct": 9.85,
       "color": "#78A6C2"
     },
     {
       "name": "JavaScript",
       "bytes": 308850,
-      "pct": 6.86,
+      "pct": 6.82,
       "color": "#8FBF9F"
     },
     {
       "name": "CSS",
       "bytes": 276302,
-      "pct": 6.13,
+      "pct": 6.1,
       "color": "#8B877E"
     },
     {
       "name": "Java",
       "bytes": 126009,
-      "pct": 2.8,
+      "pct": 2.78,
       "color": "#B7A9DE"
     },
     {
       "name": "HTML",
       "bytes": 57673,
-      "pct": 1.28,
+      "pct": 1.27,
       "color": "#78A6C2"
     }
   ]
