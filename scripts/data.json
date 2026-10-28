@@ -1,0 +1,159 @@
+{
+  "username": "Aicyraa",
+  "updated_at": "2026-10-28T09:17:06.724457+00:00",
+  "total_contributions": 2033,
+  "active_days": 246,
+  "best_week": 416,
+  "current_streak": 66,
+  "longest_streak": 66,
+  "total_commits": null,
+  "total_prs": null,
+  "public_repos": 49,
+  "weekly_contributions": [
+    20,
+    20,
+    8,
+    6,
+    7,
+    0,
+    1,
+    11,
+    19,
+    45,
+    52,
+    56,
+    40,
+    13,
+    26,
+    43,
+    62,
+    23,
+    33,
+    32,
+    28,
+    33,
+    42,
+    23,
+    23,
+    13,
+    20,
+    24,
+    21,
+    13,
+    25,
+    2,
+    6,
+    13,
+    2,
+    5,
+    17,
+    12,
+    6,
+    0,
+    16,
+    16,
+    24,
+    16,
+    7,
+    9,
+    68,
+    56,
+    29,
+    11,
+    264,
+    416,
+    256
+  ],
+  "month_labels": [
+    {
+      "index": 0,
+      "month": "Oct"
+    },
+    {
+      "index": 1,
+      "month": "Nov"
+    },
+    {
+      "index": 6,
+      "month": "Dec"
+    },
+    {
+      "index": 10,
+      "month": "Jan"
+    },
+    {
+      "index": 14,
+      "month": "Feb"
+    },
+    {
+      "index": 18,
+      "month": "Mar"
+    },
+    {
+      "index": 23,
+      "month": "Apr"
+    },
+    {
+      "index": 27,
+      "month": "May"
+    },
+    {
+      "index": 32,
+      "month": "Jun"
+    },
+    {
+      "index": 36,
+      "month": "Jul"
+    },
+    {
+      "index": 40,
+      "month": "Aug"
+    },
+    {
+      "index": 45,
+      "month": "Sep"
+    },
+    {
+      "index": 49,
+      "month": "Oct"
+    }
+  ],
+  "languages": [
+    {
+      "name": "TypeScript",
+      "bytes": 3245803,
+      "pct": 72.05,
+      "color": "#B7A9DE"
+    },
+    {
+      "name": "Python",
+      "bytes": 420533,
+      "pct": 9.34,
+      "color": "#78A6C2"
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 308850,
+      "pct": 6.86,
+      "color": "#8FBF9F"
+    },
+    {
+      "name": "CSS",
+      "bytes": 276302,
+      "pct": 6.13,
+      "color": "#8B877E"
+    },
+    {
+      "name": "Java",
+      "bytes": 126009,
+      "pct": 2.8,
+      "color": "#B7A9DE"
+    },
+    {
+      "name": "HTML",
+      "bytes": 57673,
+      "pct": 1.28,
+      "color": "#78A6C2"
+    }
+  ]
+}
