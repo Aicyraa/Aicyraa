@@ -20,6 +20,10 @@
 
 <img src="./langs.svg" width="760" alt="Language distribution by bytes across public, non-fork repositories"/>
 
+<br/>
+
+<img src="./skyline.svg" width="960" alt="Animated 3D skyline of daily GitHub contributions over the last year. Blue buildings rise from left to right, with the busiest day highlighted in orange."/>
+
 <sub>Refreshed daily </sub>
 
 </div>

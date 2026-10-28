@@ -139,9 +139,12 @@ def write_static():
 
 def render_all(data):
     from generate_stats import generate_stats_svg
+    from generate_skyline import generate_skyline_svg
     from generate_streak import generate_streak_svg
     from generate_langs import generate_langs_svg
     write_static()
+    # Keep skyline CSS animations; finish_svg intentionally freezes older charts.
+    (ROOT/'skyline.svg').write_text(generate_skyline_svg(data), encoding='utf-8')
     stats = finish_svg(generate_stats_svg(data))
     (ROOT/'stats.svg').write_text(stats,encoding='utf-8')
     (ROOT/'profile-panel.svg').write_text(profile_panel(stats),encoding='utf-8')

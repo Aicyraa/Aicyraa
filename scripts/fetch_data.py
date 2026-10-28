@@ -11,12 +11,13 @@ from html.parser import HTMLParser
 class CalendarParser(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.dates, self.counts, self.tooltip = {}, {}, None
+        self.dates, self.counts, self.levels, self.tooltip = {}, {}, {}, None
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if tag == 'td' and 'data-date' in attrs:
             self.dates[attrs['id']] = attrs['data-date']
+            self.levels[attrs['id']] = int(attrs.get('data-level', 0))
         if tag == 'tool-tip':
             self.tooltip = attrs.get('for')
 
@@ -54,6 +55,9 @@ def fetch_github_data(username, token=None):
         daily = {date.fromisoformat(day): calendar.counts[key] for key, day in calendar.dates.items()
                  if date.fromisoformat(day) <= today}
         days = sorted(daily)
+        levels = {day: calendar.levels[key] for key, day in calendar.dates.items()}
+        daily_contributions = [{'date': day.isoformat(), 'count': daily[day],
+                                'level': levels[day.isoformat()]} for day in days]
         weekly = defaultdict(int)
         for day in days:
             weekly[day - timedelta(days=(day.weekday() + 1) % 7)] += daily[day]
@@ -93,7 +97,8 @@ def fetch_github_data(username, token=None):
                 'total_contributions': sum(daily.values()), 'active_days': sum(n > 0 for n in daily.values()),
                 'best_week': max(weekly.values()), 'current_streak': current, 'longest_streak': longest,
                 'total_commits': None, 'total_prs': None, 'public_repos': len(repos),
-                'weekly_contributions': list(weekly.values()), 'month_labels': labels, 'languages': languages}
+                'weekly_contributions': list(weekly.values()), 'month_labels': labels, 'languages': languages,
+                'daily_contributions': daily_contributions}
         if token:
             try:
                 result = request('https://api.github.com/graphql', {
