@@ -3,6 +3,7 @@ import json
 import os
 import sys
 from fetch_data import fetch_github_data
+from refresh_avatar import refresh_avatar
 from profile_design import ROOT, render_all
 
 
@@ -18,6 +19,7 @@ def main():
         data = json.loads(path.read_text())
     else:
         raise SystemExit('No fresh or saved profile data available.')
+    refresh_avatar(username, token)
     render_all(data)
     print('Generated profile panel, tools, streaks, and language graphics.')
 

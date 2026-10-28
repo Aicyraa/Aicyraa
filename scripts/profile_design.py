@@ -2,6 +2,7 @@
 import base64
 import json
 import re
+import textwrap
 from html import escape
 from pathlib import Path
 import xml.etree.ElementTree as ET
@@ -73,21 +74,38 @@ def profile_panel(stats_svg):
 
 
 def about_panel():
-    body = '<rect x=".5" y=".5" width="959" height="337" rx="12" fill="none" stroke="#2a3b51"/>'
-    body += '<path d="M1 40H959" stroke="#2a3b51"/>'
+    body = '<rect x=".5" y=".5" width="959" height="391" rx="12" fill="none" stroke="#2a3b51"/>'
+    body += '<path d="M1 40H959M343 40V391" stroke="#2a3b51"/>'
     for x in [22, 35, 48]:
         body += f'<circle cx="{x}" cy="21" r="3" fill="#52657c"/>'
-    body += text(480, 25, '~/about', 10, MUTED, 'text-anchor="middle"')
-    body += text(24, 73, '$ cat about.txt', 12, ORANGE)
-    body += text(24, 100, 'A builder', 14, BLUE, 'font-weight="700"')
-    body += text(24, 123, 'Based in the Philippines. I build useful software around everyday problems.', 12)
-    body += text(24, 163, '$ cat work.txt', 12, ORANGE)
-    body += text(24, 190, 'I work with React and TypeScript on web applications, alongside Python and Java.', 12)
-    body += text(24, 212, 'My projects span grocery budgeting, student case management, data structures, and algorithms.', 12)
-    body += text(24, 252, '$ cat focus.txt', 12, ORANGE)
-    body += text(24, 279, 'My current focus is backend development and agentic systems.', 12)
-    body += text(24, 301, 'I’m exploring how APIs, data workflows, and tool-using agents fit together in practical applications.', 12)
-    return frame(338, body, 960)
+    body += text(652, 25, '~/about', 10, MUTED, 'text-anchor="middle"')
+    body += text(172, 25, 'avatar.ascii', 10, MUTED, 'text-anchor="middle"')
+    body += text(367, 73, '$ cat about.txt', 12, ORANGE)
+    body += text(367, 100, 'A builder', 14, BLUE, 'font-weight="700"')
+    y = 123
+    for line in textwrap.wrap('Based in the Philippines. I build useful software around everyday problems.', width=76):
+        body += text(367, y, line, 12)
+        y += 22
+    sections = [
+        ('work', 'I work with React and TypeScript on web applications, alongside Python and Java. My projects span grocery budgeting, student case management, data structures, and algorithms.'),
+        ('focus', 'My current focus is backend development and agentic systems. I’m exploring how APIs, data workflows, and tool-using agents fit together in practical applications.'),
+    ]
+    for name, paragraph in sections:
+        y += 17
+        body += text(367, y, f'$ cat {name}.txt', 12, ORANGE)
+        y += 27
+        for line in textwrap.wrap(paragraph, width=76):
+            body += text(367, y, line, 12)
+            y += 22
+    # Fixed-width characters sampled from the real GitHub avatar, with sampled colors.
+    portrait = json.loads((ROOT/'assets/avatar-ascii.json').read_text())
+    body += '<g aria-label="ASCII rendering of the current GitHub profile picture">'
+    for row_index, row in enumerate(portrait['rows']):
+        for col_index, (char, color) in enumerate(row):
+            if char != ' ':
+                body += text(round(29 + col_index * 5.1, 2), round(79 + row_index * 9.3, 2), char, 8.5, color)
+    body += '</g>'
+    return frame(392, body, 960)
 
 
 def write_static():
