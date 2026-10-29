@@ -20,10 +20,10 @@ text { font-family: 'JBM Medium', ui-monospace, monospace; }
 </style>
 </defs>
 
-  <g opacity="1"><text text-anchor="middle" x="155" y="34" class="b" font-size="30" fill="#d4d4d4">66</text>
+  <g opacity="1"><text text-anchor="middle" x="155" y="34" class="b" font-size="30" fill="#d4d4d4">67</text>
     <text text-anchor="middle" x="155" y="54" font-size="11" fill="#969696">current streak</text>
   </g>
-  <g opacity="1"><text text-anchor="middle" x="465" y="34" class="b" font-size="30" fill="#d9a078">66</text>
+  <g opacity="1"><text text-anchor="middle" x="465" y="34" class="b" font-size="30" fill="#d9a078">67</text>
     <text text-anchor="middle" x="465" y="54" font-size="11" fill="#969696">longest streak · days</text>
   </g>
 </svg>
