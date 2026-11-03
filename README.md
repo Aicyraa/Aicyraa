@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="./profile-panel.svg" width="960" alt="Terminal profile: Jee Daguman, aicyraa, Philippines. Current focus: backend development and agentic systems. Alongside: public GitHub contribution analytics for the last year."/>
+<img src="./about-panel.svg" width="960" alt="A builder based in the Philippines, building useful software around everyday problems. I work with React and TypeScript on web applications, alongside Python and Java. My projects span grocery budgeting, student case management, data structures, and algorithms. My current focus is backend development and agentic systems, exploring how APIs, data workflows, and tool-using agents fit together in practical applications. On the left: an ASCII rendering of my GitHub profile picture."/>
 
 <br/><br/>
 
-<img src="./about-panel.svg" width="960" alt="A builder based in the Philippines, building useful software around everyday problems. I work with React and TypeScript on web applications, alongside Python and Java. My projects span grocery budgeting, student case management, data structures, and algorithms. My current focus is backend development and agentic systems, exploring how APIs, data workflows, and tool-using agents fit together in practical applications. On the left: an ASCII rendering of my GitHub profile picture."/>
+<img src="./profile-panel.svg" width="960" alt="Terminal profile: Jee Daguman, aicyraa, Philippines. Current focus: backend development and agentic systems. Alongside: public GitHub contribution analytics for the last year."/>
 
 <br/><br/>
 
