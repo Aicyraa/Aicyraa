@@ -21,8 +21,31 @@ def font_style():
     return ''.join(styles) + 'text{font-family:JBM,monospace}'
 
 
+# Adaptive palette: neutral slate text with complementary blue (accent) and orange (highlight).
+# Light values are the default; dark values apply when the viewer prefers a dark scheme.
+LIGHT = dict(ink='#1f2328', muted='#59636e', accent='#2457a6', highlight='#b84d00',
+             line='#d0d7de', dot='#c4cad0', icon='#4b5563', surface='#ffffff')
+DARK = dict(ink='#e6edf3', muted='#9198a1', accent='#7aa2f7', highlight='#f0a060',
+            line='#30363d', dot='#484f58', icon='#aab3bd', surface='#0d1117')
+# Generators emit these hex literals; the rules below remap them onto the tokens.
+FILL_MAP = {INK: 'ink', MUTED: 'muted', ACCENT: 'accent', HIGHLIGHT: 'highlight',
+            '#303030': 'line', '#626262': 'dot', '#aaaaaa': 'icon', '#191919': 'surface'}
+STROKE_MAP = {ACCENT: 'accent', '#303030': 'line', '#393939': 'line', '#626262': 'dot',
+              '#191919': 'surface', HIGHLIGHT: 'highlight'}
+
+
+def theme_css():
+    root = lambda t: ''.join(f'--{k}:{v};' for k, v in t.items())
+    css = f':root{{{root(LIGHT)}}}@media(prefers-color-scheme:dark){{:root{{{root(DARK)}}}}}'
+    css += ''.join(f'[fill="{h}"]{{fill:var(--{t})}}' for h, t in FILL_MAP.items())
+    css += ''.join(f'[stroke="{h}"]{{stroke:var(--{t})}}' for h, t in STROKE_MAP.items())
+    css += 'stop{stop-color:var(--accent)}'
+    css += '@media(prefers-color-scheme:light){.avatar{filter:invert(1)}}'
+    return css
+
+
 def frame(height, body, width=620):
-    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}"><style>{font_style()}</style>{body}</svg>'
+    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}"><style>{font_style()}{theme_css()}</style>{body}</svg>'
 
 
 def text(x, y, value, size=12, color=INK, extra=''):
@@ -64,7 +87,7 @@ def profile_panel(stats_svg):
     for i,(line,color) in enumerate(lines):
         body += text(24,160+i*20,line,11,color)
     body += text(24,306,'$ ',12,HIGHLIGHT)
-    body += '<rect x="39" y="295" width="7" height="13" fill="#b4b4b4" opacity=".75"/>'
+    body += f'<rect x="39" y="295" width="7" height="13" fill="{ACCENT}" opacity=".75"/>'
     root = ET.fromstring(stats_svg)
     root.set('x','331'); root.set('y','49'); root.set('width','610'); root.set('height','256')
     root.insert(0, ET.Element(NS+'title'))
@@ -99,13 +122,13 @@ def about_panel():
             y += 22
     # Fixed-width characters sampled from the real GitHub avatar, with sampled colors.
     portrait = json.loads((ROOT/'assets/avatar-ascii.json').read_text())
-    body += '<g aria-label="Grayscale ASCII rendering of the current GitHub profile picture">'
+    body += '<g class="avatar" aria-label="Grayscale ASCII rendering of the current GitHub profile picture">'
     for row_index, row in enumerate(portrait['rows']):
         for col_index, (char, color) in enumerate(row):
             if char != ' ':
                 luminance = round(sum(int(color[i:i+2], 16) * weight for i, weight in [(1, .2126), (3, .7152), (5, .0722)]))
                 color = f'#{luminance:02x}{luminance:02x}{luminance:02x}'
-                body += text(round(29 + col_index * 5.1, 2), round(79 + row_index * 9.3, 2), char, 8.5, color)
+                body += f'<text x="{round(29 + col_index * 5.1, 2)}" y="{round(79 + row_index * 9.3, 2)}" font-size="8.5" style="fill:{color}" xml:space="preserve">{escape(char)}</text>'
     body += '</g>'
     return frame(392, body, 960)
 
@@ -144,10 +167,6 @@ def analytics_panel(streak, languages):
 
 def write_static():
     (ROOT/'about-panel.svg').write_text(about_panel(), encoding='utf-8')
-    for name,label in [('about','about'), ('stack','tools I use'), ('stats','languages & streaks')]:
-        body = '<path d="M100 27H350M610 27H860" stroke="#393939"/>'
-        body += text(480,31,label,11,ACCENT,'text-anchor="middle" letter-spacing="1.5"')
-        (ROOT/f'hd-{name}.svg').write_text(frame(54,body,960))
     source = (ROOT/'assets/stack-reference.svg').read_text()
     groups = re.findall(r'<g[^>]*>\s*(<path[^>]+/>)\s*</g>\s*<text[^>]*>([^<]+)</text>',source)
     paths = {label:path for path,label in groups}
@@ -169,7 +188,6 @@ def write_static():
             icon = f'<g transform="translate({x-17},{y-17}) scale({34/24})">{path}</g>'
         body += icon + text(x,y+38,label,10,MUTED,'text-anchor="middle"')
     tools = frame(350,body,840)
-    (ROOT/'stack-icons.svg').write_text(tools)
     (ROOT/'tools-panel.svg').write_text(tools_panel(tools), encoding='utf-8')
 
 
@@ -182,12 +200,9 @@ def render_all(data):
     # Keep skyline CSS animations; finish_svg intentionally freezes older charts.
     (ROOT/'skyline.svg').write_text(generate_skyline_svg(data), encoding='utf-8')
     stats = finish_svg(generate_stats_svg(data))
-    (ROOT/'stats.svg').write_text(stats,encoding='utf-8')
     (ROOT/'profile-panel.svg').write_text(profile_panel(stats),encoding='utf-8')
     streak = finish_svg(generate_streak_svg(data))
     languages = finish_svg(generate_langs_svg(data))
-    (ROOT/'streak.svg').write_text(streak, encoding='utf-8')
-    (ROOT/'langs.svg').write_text(languages, encoding='utf-8')
     (ROOT/'analytics-panel.svg').write_text(analytics_panel(streak, languages), encoding='utf-8')
 
 

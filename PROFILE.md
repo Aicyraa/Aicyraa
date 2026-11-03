@@ -1,8 +1,12 @@
 # Profile graphics
 
-The README contains a transparent SVG panel with a charcoal border with a terminal profile on the left and live contribution analytics on the right. GitHub strips CSS flexbox from README markup, so both columns are composed into one SVG for a stable side-by-side layout. Muted orange accents highlight the terminal commands and best-week statistic.
+The README contains a transparent SVG panel with a neutral border with a terminal profile on the left and live contribution analytics on the right. GitHub strips CSS flexbox from README markup, so both columns are composed into one SVG for a stable side-by-side layout. orange and blue accents highlight the terminal commands and best-week statistic.
 
 A matching transparent terminal About panel follows it, introducing the profile as “A builder” with details about projects, languages, and current interests. A grayscale ASCII rendering of the actual GitHub avatar sits in its left column. The standalone name header, contact icons, and projects section have been removed from the README. Streak values and labels are centered within two equal columns without an underline. The toolkit and streak/language analytics each have their own transparent terminal container. The centered toolkit contains 20 monochrome logos, including Prisma, Neon, Supabase, Vercel, Vitest, Jest, Bruno, and Postman.
+
+## Theme
+
+All panels adapt to the viewer's light or dark scheme through CSS variables defined in `theme_css()` in `scripts/profile_design.py` (ink, muted, blue accent, orange highlight, line). Skyline building colors live in `building_css()` in `scripts/generate_skyline.py`. Only the five SVGs referenced by the README are generated and committed.
 
 ## Editing
 

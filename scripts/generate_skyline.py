@@ -2,11 +2,28 @@
 from datetime import date, timedelta
 from math import sqrt
 from html import escape
-from profile_design import frame, text, ACCENT, HIGHLIGHT, MUTED, INK
+from profile_design import frame, text, ACCENT, HIGHLIGHT, MUTED, INK, LIGHT, DARK
 
 
 def shade(color, factor):
     return '#' + ''.join(f'{min(255, round(int(color[i:i+2],16)*factor)):02x}' for i in (1,3,5))
+
+
+# Contribution levels 0-4 (light mode runs pale to deep blue; dark mode glows up from slate).
+LEVELS = {
+    'light': ['#e4e8ee', '#bac6d6', '#8ea3c4', '#5b7fba', '#2457a6'],
+    'dark': ['#21262d', '#38445a', '#4f6794', '#5f84cc', '#7aa2f7'],
+}
+
+
+def building_css():
+    def rules(mode, peak):
+        out = ''
+        for i, color in enumerate(LEVELS[mode] + [peak]):
+            name = 'peak' if i == 5 else f'lv{i}'
+            out += f'.{name} .f{{fill:{color}}}.{name} .s{{fill:{shade(color,.70)}}}.{name} .t{{fill:{shade(color,1.17)}}}'
+        return out
+    return rules('light', LIGHT['highlight']) + '@media(prefers-color-scheme:dark){' + rules('dark', DARK['highlight']) + '}'
 
 
 def generate_skyline_svg(data):
@@ -37,9 +54,10 @@ def generate_skyline_svg(data):
         end = (week/max(1,weeks-1)*6+.8)/16*100
         css += f'.week-{week}{{animation:rise-{week} 16s cubic-bezier(.22,.61,.36,1) infinite;transform-origin:0 0}}\n'
         css += f'@keyframes rise-{week}{{0%,{begin:.4f}%{{transform:scaleY(0)}}{end:.4f}%,99.99%{{transform:scaleY(1)}}100%{{transform:scaleY(0)}}}}\n'
+    css += building_css()
     css += '@media(prefers-reduced-motion:reduce){.building,.city,.peak-note{animation:none!important;transform:none!important;opacity:1!important}}'
     body += f'<style>{css}</style>'
-    body += '<path d="M43 333H852L894 291H85Z" fill="#232323" fill-opacity=".3"/>'
+    body += '<path d="M43 333H852L894 291H85Z" fill="#303030" fill-opacity=".35"/>'
     buildings = []
     peak_point = None
     for day in days:
@@ -49,17 +67,16 @@ def generate_skyline_svg(data):
         x, y = 48+week*step+(6-row)*6, 330-(6-row)*6
         count = day['count']
         height = 2+sqrt(count/max(1,peak_count))*170 if count else 1
-        color = ['#303030','#515151','#737373','#969696','#b4b4b4'][max(0,min(4,day['level']))]
         is_peak = day is peak and count>0
+        level_class = 'peak' if is_peak else f"lv{max(0,min(4,day['level']))}"
         if is_peak:
-            color = HIGHLIGHT
             peak_point = (x+6, y-height-4)
         w,d=11.5,5
-        faces = f'<path d="M0 {-height:.2f}H{w}V0H0Z" fill="{color}"/>'
-        faces += f'<path d="M{w} 0L{w+d} -4V{-height-4:.2f}L{w} {-height:.2f}Z" fill="{shade(color,.70)}"/>'
-        faces += f'<path d="M0 {-height:.2f}L{d} {-height-4:.2f}H{w+d}L{w} {-height:.2f}Z" fill="{shade(color,1.17)}"/>'
+        faces = f'<path d="M0 {-height:.2f}H{w}V0H0Z" class="f"/>'
+        faces += f'<path d="M{w} 0L{w+d} -4V{-height-4:.2f}L{w} {-height:.2f}Z" class="s"/>'
+        faces += f'<path d="M0 {-height:.2f}L{d} {-height-4:.2f}H{w+d}L{w} {-height:.2f}Z" class="t"/>'
         title = escape(f"{actual:%d %b %Y}: {count} contributions")
-        building = f'<g transform="translate({x:.2f} {y:.2f})"><title>{title}</title><g class="building week-{week}" data-date="{actual}" data-count="{count}">{faces}</g></g>'
+        building = f'<g transform="translate({x:.2f} {y:.2f})"><title>{title}</title><g class="building {level_class} week-{week}" data-date="{actual}" data-count="{count}">{faces}</g></g>'
         buildings.append((row, week, building))
     body += '<g class="city">'+''.join(item[2] for item in sorted(buildings))+'</g>'
     if peak_point:
