@@ -2,7 +2,7 @@
 from datetime import date, timedelta
 from math import sqrt
 from html import escape
-from profile_design import frame, text, ACCENT, HIGHLIGHT, MUTED, INK, LIGHT, DARK
+from profile_design import frame, text, ACCENT, HIGHLIGHT, MUTED, INK, LIGHT, DARK, terminal_body
 
 
 def shade(color, factor):
@@ -29,11 +29,11 @@ def building_css():
 def generate_skyline_svg(data):
     days = sorted(data.get('daily_contributions', []), key=lambda day: day['date'])
     body = '<title>Animated skyline of daily GitHub contributions</title>'
-    body += '<rect x=".5" y=".5" width="959" height="415" rx="12" fill="none" stroke="#393939"/>'
-    body += text(24, 29, 'contribution skyline', 11, ACCENT)
+    body += terminal_body(456, '~/skyline')
     if not days:
+        body += '<g transform="translate(0 40)">'
         body += text(480, 215, 'Daily contributions will appear after the next successful refresh.', 12, MUTED, 'text-anchor="middle"')
-        return frame(416, body, 960)
+        return frame(456, body + '</g>', 960)
     start = date.fromisoformat(days[0]['date'])
     first_sunday = start - timedelta(days=(start.weekday()+1)%7)
     last = date.fromisoformat(days[-1]['date'])
@@ -41,9 +41,9 @@ def generate_skyline_svg(data):
     step = min(15, 820/max(1, weeks-1))
     peak = max(days, key=lambda day: day['count'])
     peak_count = peak['count']
-    body += text(935, 29, f"{start:%d %b %Y} — {last:%d %b %Y}", 9, MUTED, 'text-anchor="end"')
-    body += text(24, 71, f"{sum(day['count'] for day in days):,}", 26, INK)
-    body += text(25, 92, 'contributions / last year', 10, MUTED)
+    header_range = text(935, 25, f"{start:%d %b %Y} — {last:%d %b %Y}", 9, MUTED, 'text-anchor="end"')
+    body += text(24, 111, f"{sum(day['count'] for day in days):,}", 26, INK)
+    body += text(25, 132, 'contributions / last year', 10, MUTED)
     css = '''.city{animation:city-cycle 16s linear infinite}
 @keyframes city-cycle{0%,88%{opacity:1}96%,100%{opacity:0}}
 .peak-note{animation:peak-note 16s linear infinite}
@@ -56,7 +56,7 @@ def generate_skyline_svg(data):
         css += f'@keyframes rise-{week}{{0%,{begin:.4f}%{{transform:scaleY(0)}}{end:.4f}%,99.99%{{transform:scaleY(1)}}100%{{transform:scaleY(0)}}}}\n'
     css += building_css()
     css += '@media(prefers-reduced-motion:reduce){.building,.city,.peak-note{animation:none!important;transform:none!important;opacity:1!important}}'
-    body += f'<style>{css}</style>'
+    body += f'<style>{css}</style><g transform="translate(0 40)">'
     body += '<path d="M43 333H852L894 291H85Z" fill="#303030" fill-opacity=".35"/>'
     buildings = []
     peak_point = None
@@ -98,4 +98,4 @@ def generate_skyline_svg(data):
                 last_label=x
     body += text(24, 391, 'one building / one day', 9, MUTED)
     body += text(935, 391, 'height = √contributions', 9, MUTED, 'text-anchor="end"')
-    return frame(416, body, 960)
+    return frame(456, body + '</g>' + header_range, 960)
