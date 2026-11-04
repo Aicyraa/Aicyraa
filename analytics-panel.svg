@@ -44,38 +44,38 @@ text { font-family: 'JBM Medium', ui-monospace, monospace; }
 
   <g opacity="1"><text x="0" y="14" font-size="11" fill="#969696">TypeScript</text>
     <rect x="96" y="5" width="464" height="7" rx="3.5" fill="#303030" />
-    <rect x="96" y="5" height="7" rx="3.5" fill="#b4b4b4" width="320.3">
+    <rect x="96" y="5" height="7" rx="3.5" fill="#b4b4b4" width="312.6">
       </rect>
-    <text x="620" y="14" text-anchor="end" font-size="11" fill="#969696">69.02%</text>
+    <text x="620" y="14" text-anchor="end" font-size="11" fill="#969696">67.38%</text>
   </g>
   <g opacity="1"><text x="0" y="34" font-size="11" fill="#969696">Python</text>
     <rect x="96" y="25" width="464" height="7" rx="3.5" fill="#303030" />
-    <rect x="96" y="25" height="7" rx="3.5" fill="#d9a078" width="47.0">
+    <rect x="96" y="25" height="7" rx="3.5" fill="#d9a078" width="45.9">
       </rect>
-    <text x="620" y="34" text-anchor="end" font-size="11" fill="#969696">10.12%</text>
+    <text x="620" y="34" text-anchor="end" font-size="11" fill="#969696">9.89%</text>
   </g>
   <g opacity="1"><text x="0" y="54" font-size="11" fill="#969696">JavaScript</text>
     <rect x="96" y="45" width="464" height="7" rx="3.5" fill="#303030" />
-    <rect x="96" y="45" height="7" rx="3.5" fill="#aaaaaa" width="32.3">
+    <rect x="96" y="45" height="7" rx="3.5" fill="#aaaaaa" width="34.5">
       </rect>
-    <text x="620" y="54" text-anchor="end" font-size="11" fill="#969696">6.97%</text>
+    <text x="620" y="54" text-anchor="end" font-size="11" fill="#969696">7.44%</text>
   </g>
   <g opacity="1"><text x="0" y="74" font-size="11" fill="#969696">CSS</text>
     <rect x="96" y="65" width="464" height="7" rx="3.5" fill="#303030" />
-    <rect x="96" y="65" height="7" rx="3.5" fill="#969696" width="27.2">
+    <rect x="96" y="65" height="7" rx="3.5" fill="#969696" width="26.6">
       </rect>
-    <text x="620" y="74" text-anchor="end" font-size="11" fill="#969696">5.87%</text>
+    <text x="620" y="74" text-anchor="end" font-size="11" fill="#969696">5.73%</text>
   </g>
-  <g opacity="1"><text x="0" y="94" font-size="11" fill="#969696">Java</text>
+  <g opacity="1"><text x="0" y="94" font-size="11" fill="#969696">QML</text>
     <rect x="96" y="85" width="464" height="7" rx="3.5" fill="#303030" />
-    <rect x="96" y="85" height="7" rx="3.5" fill="#b4b4b4" width="12.4">
+    <rect x="96" y="85" height="7" rx="3.5" fill="#b4b4b4" width="19.7">
       </rect>
-    <text x="620" y="94" text-anchor="end" font-size="11" fill="#969696">2.68%</text>
+    <text x="620" y="94" text-anchor="end" font-size="11" fill="#969696">4.24%</text>
   </g>
-  <g opacity="1"><text x="0" y="114" font-size="11" fill="#969696">QML</text>
+  <g opacity="1"><text x="0" y="114" font-size="11" fill="#969696">Java</text>
     <rect x="96" y="105" width="464" height="7" rx="3.5" fill="#303030" />
-    <rect x="96" y="105" height="7" rx="3.5" fill="#d9a078" width="12.2">
+    <rect x="96" y="105" height="7" rx="3.5" fill="#d9a078" width="12.1">
       </rect>
-    <text x="620" y="114" text-anchor="end" font-size="11" fill="#969696">2.63%</text>
+    <text x="620" y="114" text-anchor="end" font-size="11" fill="#969696">2.61%</text>
   </g>
 </svg></svg>
