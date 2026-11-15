@@ -1,8 +1,8 @@
 {
   "username": "Aicyraa",
-  "updated_at": "2026-11-14T09:05:17.608098+00:00",
-  "total_contributions": 2262,
-  "active_days": 252,
+  "updated_at": "2026-11-15T09:36:11.899034+00:00",
+  "total_contributions": 2254,
+  "active_days": 251,
   "best_week": 416,
   "current_streak": 0,
   "longest_streak": 72,
@@ -10,7 +10,6 @@
   "total_prs": 36,
   "public_repos": 52,
   "weekly_contributions": [
-    8,
     6,
     7,
     0,
@@ -62,7 +61,8 @@
     416,
     315,
     182,
-    28
+    28,
+    0
   ],
   "month_labels": [
     {
@@ -70,51 +70,51 @@
       "month": "Nov"
     },
     {
-      "index": 4,
+      "index": 3,
       "month": "Dec"
     },
     {
-      "index": 8,
+      "index": 7,
       "month": "Jan"
     },
     {
-      "index": 12,
+      "index": 11,
       "month": "Feb"
     },
     {
-      "index": 16,
+      "index": 15,
       "month": "Mar"
     },
     {
-      "index": 21,
+      "index": 20,
       "month": "Apr"
     },
     {
-      "index": 25,
+      "index": 24,
       "month": "May"
     },
     {
-      "index": 30,
+      "index": 29,
       "month": "Jun"
     },
     {
-      "index": 34,
+      "index": 33,
       "month": "Jul"
     },
     {
-      "index": 38,
+      "index": 37,
       "month": "Aug"
     },
     {
-      "index": 43,
+      "index": 42,
       "month": "Sep"
     },
     {
-      "index": 47,
+      "index": 46,
       "month": "Oct"
     },
     {
-      "index": 51,
+      "index": 50,
       "month": "Nov"
     }
   ],
@@ -157,41 +157,6 @@
     }
   ],
   "daily_contributions": [
-    {
-      "date": "2025-11-09",
-      "count": 8,
-      "level": 1
-    },
-    {
-      "date": "2025-11-10",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-11",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-12",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-13",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-14",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-15",
-      "count": 0,
-      "level": 0
-    },
     {
       "date": "2025-11-16",
       "count": 0,
@@ -2009,6 +1974,11 @@
     },
     {
       "date": "2026-11-14",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-15",
       "count": 0,
       "level": 0
     }
