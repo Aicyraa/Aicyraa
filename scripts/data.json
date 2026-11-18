@@ -1,12 +1,12 @@
 {
   "username": "Aicyraa",
-  "updated_at": "2026-11-17T10:50:11.157386+00:00",
-  "total_contributions": 2354,
+  "updated_at": "2026-11-18T10:19:35.915883+00:00",
+  "total_contributions": 2360,
   "active_days": 253,
   "best_week": 416,
   "current_streak": 2,
   "longest_streak": 72,
-  "total_commits": 2137,
+  "total_commits": 2143,
   "total_prs": 36,
   "public_repos": 54,
   "weekly_contributions": [
@@ -62,7 +62,7 @@
     315,
     184,
     34,
-    92
+    98
   ],
   "month_labels": [
     {
@@ -121,38 +121,38 @@
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 3909849,
-      "pct": 69.84,
+      "bytes": 3952547,
+      "pct": 70.02,
       "color": "#B7A9DE"
     },
     {
       "name": "Python",
       "bytes": 476668,
-      "pct": 8.51,
+      "pct": 8.44,
       "color": "#78A6C2"
     },
     {
       "name": "JavaScript",
       "bytes": 368141,
-      "pct": 6.58,
+      "pct": 6.52,
       "color": "#8FBF9F"
     },
     {
       "name": "CSS",
-      "bytes": 333257,
-      "pct": 5.95,
+      "bytes": 337191,
+      "pct": 5.97,
       "color": "#8B877E"
     },
     {
       "name": "QML",
       "bytes": 204684,
-      "pct": 3.66,
+      "pct": 3.63,
       "color": "#B7A9DE"
     },
     {
       "name": "Java",
       "bytes": 126009,
-      "pct": 2.25,
+      "pct": 2.23,
       "color": "#78A6C2"
     }
   ],
@@ -1989,8 +1989,13 @@
     },
     {
       "date": "2026-11-17",
-      "count": 83,
+      "count": 89,
       "level": 4
+    },
+    {
+      "date": "2026-11-18",
+      "count": 0,
+      "level": 0
     }
   ]
 }
