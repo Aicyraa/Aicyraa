@@ -1,16 +1,15 @@
 {
   "username": "Aicyraa",
-  "updated_at": "2026-11-21T09:57:02.904205+00:00",
-  "total_contributions": 2366,
-  "active_days": 255,
+  "updated_at": "2026-11-22T09:54:15.923020+00:00",
+  "total_contributions": 2377,
+  "active_days": 254,
   "best_week": 416,
-  "current_streak": 1,
+  "current_streak": 6,
   "longest_streak": 72,
-  "total_commits": 2146,
-  "total_prs": 37,
+  "total_commits": 2161,
+  "total_prs": 38,
   "public_repos": 55,
   "weekly_contributions": [
-    6,
     7,
     0,
     1,
@@ -62,7 +61,8 @@
     315,
     184,
     34,
-    104
+    121,
+    0
   ],
   "month_labels": [
     {
@@ -70,77 +70,77 @@
       "month": "Nov"
     },
     {
-      "index": 3,
+      "index": 2,
       "month": "Dec"
     },
     {
-      "index": 7,
+      "index": 6,
       "month": "Jan"
     },
     {
-      "index": 11,
+      "index": 10,
       "month": "Feb"
     },
     {
-      "index": 15,
+      "index": 14,
       "month": "Mar"
     },
     {
-      "index": 20,
+      "index": 19,
       "month": "Apr"
     },
     {
-      "index": 24,
+      "index": 23,
       "month": "May"
     },
     {
-      "index": 29,
+      "index": 28,
       "month": "Jun"
     },
     {
-      "index": 33,
+      "index": 32,
       "month": "Jul"
     },
     {
-      "index": 37,
+      "index": 36,
       "month": "Aug"
     },
     {
-      "index": 42,
+      "index": 41,
       "month": "Sep"
     },
     {
-      "index": 46,
+      "index": 45,
       "month": "Oct"
     },
     {
-      "index": 50,
+      "index": 49,
       "month": "Nov"
     }
   ],
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 3982100,
-      "pct": 70.05,
+      "bytes": 3986185,
+      "pct": 70.07,
       "color": "#B7A9DE"
     },
     {
       "name": "Python",
       "bytes": 476689,
-      "pct": 8.39,
+      "pct": 8.38,
       "color": "#78A6C2"
     },
     {
       "name": "JavaScript",
       "bytes": 350518,
-      "pct": 6.17,
+      "pct": 6.16,
       "color": "#8FBF9F"
     },
     {
       "name": "CSS",
-      "bytes": 339825,
-      "pct": 5.98,
+      "bytes": 339718,
+      "pct": 5.97,
       "color": "#8B877E"
     },
     {
@@ -152,46 +152,11 @@
     {
       "name": "Java",
       "bytes": 126009,
-      "pct": 2.22,
+      "pct": 2.21,
       "color": "#78A6C2"
     }
   ],
   "daily_contributions": [
-    {
-      "date": "2025-11-16",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-17",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-18",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-19",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-20",
-      "count": 4,
-      "level": 1
-    },
-    {
-      "date": "2025-11-21",
-      "count": 1,
-      "level": 1
-    },
-    {
-      "date": "2025-11-22",
-      "count": 1,
-      "level": 1
-    },
     {
       "date": "2025-11-23",
       "count": 4,
@@ -1994,23 +1959,28 @@
     },
     {
       "date": "2026-11-18",
-      "count": 3,
+      "count": 7,
       "level": 1
     },
     {
       "date": "2026-11-19",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     },
     {
       "date": "2026-11-20",
-      "count": 0,
-      "level": 0
+      "count": 4,
+      "level": 1
     },
     {
       "date": "2026-11-21",
-      "count": 3,
+      "count": 11,
       "level": 1
+    },
+    {
+      "date": "2026-11-22",
+      "count": 0,
+      "level": 0
     }
   ]
 }
