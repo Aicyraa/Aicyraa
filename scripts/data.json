@@ -1,12 +1,12 @@
 {
   "username": "Aicyraa",
-  "updated_at": "2026-11-22T09:54:15.923020+00:00",
-  "total_contributions": 2377,
-  "active_days": 254,
+  "updated_at": "2026-11-23T10:55:00.328687+00:00",
+  "total_contributions": 2517,
+  "active_days": 255,
   "best_week": 416,
-  "current_streak": 6,
+  "current_streak": 1,
   "longest_streak": 72,
-  "total_commits": 2161,
+  "total_commits": 2296,
   "total_prs": 38,
   "public_repos": 55,
   "weekly_contributions": [
@@ -59,10 +59,10 @@
     264,
     416,
     315,
-    184,
-    34,
-    121,
-    0
+    236,
+    95,
+    130,
+    18
   ],
   "month_labels": [
     {
@@ -122,37 +122,37 @@
     {
       "name": "TypeScript",
       "bytes": 3986185,
-      "pct": 70.07,
+      "pct": 64.44,
       "color": "#B7A9DE"
     },
     {
-      "name": "Python",
-      "bytes": 476689,
-      "pct": 8.38,
+      "name": "QML",
+      "bytes": 665308,
+      "pct": 10.75,
       "color": "#78A6C2"
     },
     {
-      "name": "JavaScript",
-      "bytes": 350518,
-      "pct": 6.16,
+      "name": "Python",
+      "bytes": 478596,
+      "pct": 7.74,
       "color": "#8FBF9F"
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 408927,
+      "pct": 6.61,
+      "color": "#8B877E"
     },
     {
       "name": "CSS",
       "bytes": 339718,
-      "pct": 5.97,
-      "color": "#8B877E"
-    },
-    {
-      "name": "QML",
-      "bytes": 229288,
-      "pct": 4.03,
+      "pct": 5.49,
       "color": "#B7A9DE"
     },
     {
       "name": "Java",
       "bytes": 126009,
-      "pct": 2.21,
+      "pct": 2.04,
       "color": "#78A6C2"
     }
   ],
@@ -1780,7 +1780,7 @@
     {
       "date": "2026-10-13",
       "count": 53,
-      "level": 3
+      "level": 2
     },
     {
       "date": "2026-10-14",
@@ -1795,7 +1795,7 @@
     {
       "date": "2026-10-16",
       "count": 28,
-      "level": 2
+      "level": 1
     },
     {
       "date": "2026-10-17",
@@ -1865,7 +1865,7 @@
     {
       "date": "2026-10-30",
       "count": 27,
-      "level": 2
+      "level": 1
     },
     {
       "date": "2026-10-31",
@@ -1885,7 +1885,7 @@
     {
       "date": "2026-11-03",
       "count": 29,
-      "level": 2
+      "level": 1
     },
     {
       "date": "2026-11-04",
@@ -1899,18 +1899,18 @@
     },
     {
       "date": "2026-11-06",
-      "count": 6,
+      "count": 24,
       "level": 1
     },
     {
       "date": "2026-11-07",
-      "count": 87,
+      "count": 121,
       "level": 4
     },
     {
       "date": "2026-11-08",
-      "count": 9,
-      "level": 1
+      "count": 70,
+      "level": 3
     },
     {
       "date": "2026-11-09",
@@ -1955,7 +1955,7 @@
     {
       "date": "2026-11-17",
       "count": 89,
-      "level": 4
+      "level": 3
     },
     {
       "date": "2026-11-18",
@@ -1969,7 +1969,7 @@
     },
     {
       "date": "2026-11-20",
-      "count": 4,
+      "count": 13,
       "level": 1
     },
     {
@@ -1981,6 +1981,11 @@
       "date": "2026-11-22",
       "count": 0,
       "level": 0
+    },
+    {
+      "date": "2026-11-23",
+      "count": 18,
+      "level": 1
     }
   ]
 }
