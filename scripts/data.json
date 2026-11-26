@@ -1,10 +1,10 @@
 {
   "username": "Aicyraa",
-  "updated_at": "2026-11-25T11:27:28.832388+00:00",
+  "updated_at": "2026-11-26T11:02:37.448112+00:00",
   "total_contributions": 2518,
   "active_days": 256,
   "best_week": 416,
-  "current_streak": 2,
+  "current_streak": 0,
   "longest_streak": 72,
   "total_commits": 2296,
   "total_prs": 39,
@@ -1994,6 +1994,11 @@
     },
     {
       "date": "2026-11-25",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-26",
       "count": 0,
       "level": 0
     }
