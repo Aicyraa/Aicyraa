@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./about-panel.svg" width="960" alt="A builder based in the Philippines, building useful software around everyday problems. I work with React and TypeScript on web applications, alongside Python and Java. My projects span grocery budgeting, student case management, data structures, and algorithms. My current focus is backend development and agentic systems, exploring how APIs, data workflows, and tool-using agents fit together in practical applications. On the left: an ASCII rendering of my GitHub profile picture."/>
+<img src="./about-panel.svg" width="960" alt="A builder based in the Philippines, building useful software around everyday problems. I build full-stack web applications and backend services with TypeScript, React, and Node.js, alongside Python and Java. My work focuses on reliable APIs, clean data models, and practical software design. My current focus is backend development and agentic systems, exploring how APIs, data workflows, and tool-using agents fit together in practical applications. On the left: an ASCII rendering of my GitHub profile picture."/>
 
 <br/><br/>
 
@@ -8,7 +8,7 @@
 
 <br/><br/>
 
-<img src="./tools-panel.svg" width="960" alt="Tools I use: HTML, CSS, JavaScript, TypeScript, React, Node.js, Express, Python, Java, Git, GitHub, Vite, Prisma, Neon, Supabase, Vercel, Vitest, Jest, Bruno, and Postman. Centered monochrome logos in a terminal container."/>
+<img src="./tools-panel.svg" width="960" alt="Tools I use: HTML, CSS, JavaScript, TypeScript, React, Node.js, Express, Hono, Zod, Python, Java, Git, GitHub, Vite, Prisma, Neon, Supabase, Vercel, Vitest, Jest, Bruno, and Postman. Centered monochrome logos in a terminal container."/>
 
 <br/><br/>
 

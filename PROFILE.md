@@ -2,7 +2,7 @@
 
 The README contains a transparent SVG panel with a neutral border with a terminal profile on the left and live contribution analytics on the right. GitHub strips CSS flexbox from README markup, so both columns are composed into one SVG for a stable side-by-side layout. orange and blue accents highlight the terminal commands and best-week statistic.
 
-A matching transparent terminal About panel follows it, introducing the profile as “A builder” with details about projects, languages, and current interests. A grayscale ASCII rendering of the actual GitHub avatar sits in its left column. The standalone name header, contact icons, and projects section have been removed from the README. Streak values and labels are centered within two equal columns without an underline. The toolkit and streak/language analytics each have their own transparent terminal container. The centered toolkit contains 20 monochrome logos, including Prisma, Neon, Supabase, Vercel, Vitest, Jest, Bruno, and Postman.
+A matching transparent terminal About panel follows it, introducing the profile as “A builder” with details about projects, languages, and current interests. A grayscale ASCII rendering of the actual GitHub avatar sits in its left column. The standalone name header, contact icons, and projects section have been removed from the README. Streak values and labels are centered within two equal columns without an underline. The toolkit and streak/language analytics each have their own transparent terminal container. The centered toolkit contains 22 monochrome logos, including Hono, Zod, Prisma, Neon, Supabase, Vercel, Vitest, Jest, Bruno, and Postman.
 
 ## Theme
 
@@ -25,7 +25,7 @@ Embedded JetBrains Mono fonts are retained from the initial adaptation. All SVGs
 python scripts/generate.py Aicyraa
 ```
 
-Python 3.12 is used in Actions. Install the avatar conversion dependency first with `python -m pip install -r requirements.txt` (Pillow). Offline rendering still uses only the Python standard library. After these files are pushed to `main`, the workflow refreshes the profile panel, analytics, and ASCII avatar daily. A change to your GitHub profile picture appears after the next successful run; this is not an instant update. Failed avatar downloads or conversions retain the saved portrait. It can also be started from **Actions → Refresh profile stats → Run workflow**.
+Python 3.12 is used in Actions. Install the avatar conversion dependency first with `python -m pip install -r requirements.txt` (Pillow). Offline rendering still uses only the Python standard library. After these files are pushed to `main`, `.github/workflows/avatar.yml` checks for GitHub profile picture updates hourly (only committing when changed), since GitHub does not provide a native webhook for profile-picture edits. `.github/workflows/stats.yml` refreshes the profile panel, analytics, skyline, and ASCII avatar daily and on pushes to `main`. Failed avatar downloads or conversions retain the saved portrait. Both workflows can also be started manually via **Actions → Run workflow**.
 
 To regenerate all artwork from the saved snapshot without network access:
 

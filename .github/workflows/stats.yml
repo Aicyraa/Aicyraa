@@ -6,13 +6,6 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths:
-      - "scripts/**"
-      - "requirements.txt"
-      - ".github/workflows/stats.yml"
-      - "assets/icons/**"
-      - "assets/stack-reference.svg"
-      - "assets/avatar-ascii.json"
 
 permissions:
   contents: write
@@ -23,6 +16,7 @@ concurrency:
 
 jobs:
   refresh:
+    if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

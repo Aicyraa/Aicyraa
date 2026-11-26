@@ -110,7 +110,7 @@ def about_panel():
         body += text(367, y, line, 12)
         y += 22
     sections = [
-        ('work', 'I work with React and TypeScript on web applications, alongside Python and Java. My projects span grocery budgeting, student case management, data structures, and algorithms.'),
+        ('work', 'I build full-stack web applications and backend services with TypeScript, React, and Node.js, alongside Python and Java. My work focuses on reliable APIs, clean data models, and practical software design.'),
         ('focus', 'My current focus is backend development and agentic systems. I’m exploring how APIs, data workflows, and tool-using agents fit together in practical applications.'),
     ]
     for name, paragraph in sections:
@@ -170,22 +170,27 @@ def write_static():
     source = (ROOT/'assets/stack-reference.svg').read_text()
     groups = re.findall(r'<g[^>]*>\s*(<path[^>]+/>)\s*</g>\s*<text[^>]*>([^<]+)</text>',source)
     paths = {label:path for path,label in groups}
-    labels = ['HTML','CSS','JavaScript','TypeScript','React','Node.js','Express','Python','Java','Git',
+    labels = ['HTML','CSS','JavaScript','TypeScript','React','Node.js','Express','Hono','Zod','Python','Java','Git',
               'GitHub','Vite','Prisma','Neon','Supabase','Vercel','Vitest','Jest','Bruno','Postman']
     body = ''
+    cols = 6
+    col_step = 840 / cols
     for i,label in enumerate(labels):
-        x,y = 84+(i%5)*168, 33+(i//5)*88
+        row, col = divmod(i, cols)
+        row_count = min(cols, len(labels) - row * cols)
+        x = round((840 - row_count * col_step) / 2 + col_step / 2 + col * col_step, 2)
+        y = 33 + row * 88
         local = ROOT/'assets/icons'/f'{label.lower()}.svg'
         if local.is_file():
             icon_root = ET.fromstring(local.read_text())
             # Keep the source viewBox: logos remain correct if an upstream mark changes size.
-            icon_root.set('x',str(x-17)); icon_root.set('y',str(y-17))
+            icon_root.set('x',str(round(x-17, 2))); icon_root.set('y',str(round(y-17, 2)))
             icon_root.set('width','34'); icon_root.set('height','34')
             icon_root.set('fill','#aaaaaa')
             icon = ET.tostring(icon_root,encoding='unicode')
         else:
             path = paths[label].replace('#888888','#aaaaaa')
-            icon = f'<g transform="translate({x-17},{y-17}) scale({34/24})">{path}</g>'
+            icon = f'<g transform="translate({round(x-17, 2)},{round(y-17, 2)}) scale({34/24})">{path}</g>'
         body += icon + text(x,y+38,label,10,MUTED,'text-anchor="middle"')
     tools = frame(350,body,840)
     (ROOT/'tools-panel.svg').write_text(tools_panel(tools), encoding='utf-8')

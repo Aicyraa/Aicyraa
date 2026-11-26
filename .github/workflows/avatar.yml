@@ -1,0 +1,38 @@
+name: Refresh ASCII avatar
+
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-stats
+  cancel-in-progress: false
+
+jobs:
+  refresh-avatar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install avatar rendering dependency
+        run: python -m pip install -r requirements.txt
+      - name: Refresh ASCII avatar from GitHub profile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python scripts/refresh_avatar.py Aicyraa
+      - name: Commit updated avatar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/avatar-ascii.json about-panel.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh ascii avatar"
+            git push
+          fi

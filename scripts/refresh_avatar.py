@@ -1,10 +1,12 @@
 """Refresh the saved ASCII portrait; retain it on download or decoding failure."""
 import io
 import json
+import os
+import sys
 import urllib.request
 from urllib.parse import quote, urlsplit, urlunsplit, parse_qsl, urlencode
 
-from profile_design import ROOT
+from profile_design import ROOT, about_panel
 
 
 def image_to_ascii(raw, source):
@@ -29,7 +31,12 @@ def image_to_ascii(raw, source):
 
 def refresh_avatar(username, token=None):
     try:
-        headers = {'User-Agent': 'Aicyraa-profile', 'Accept': 'application/vnd.github+json'}
+        headers = {
+            'User-Agent': 'Aicyraa-profile',
+            'Accept': 'application/vnd.github+json',
+            'Cache-Control': 'no-cache',
+            'Pragma': 'no-cache',
+        }
         if token:
             headers['Authorization'] = f'Bearer {token}'
         request = urllib.request.Request(f'https://api.github.com/users/{quote(username, safe="")}', headers=headers)
@@ -39,7 +46,12 @@ def refresh_avatar(username, token=None):
         query = dict(parse_qsl(parts.query))
         query['s'] = '400'
         url = urlunsplit(parts._replace(query=urlencode(query)))
-        request = urllib.request.Request(url, headers={'User-Agent': 'Aicyraa-profile'})
+        image_headers = {
+            'User-Agent': 'Aicyraa-profile',
+            'Cache-Control': 'no-cache',
+            'Pragma': 'no-cache',
+        }
+        request = urllib.request.Request(url, headers=image_headers)
         with urllib.request.urlopen(request, timeout=30) as response:
             raw = response.read()
         portrait = image_to_ascii(raw, source)
@@ -50,3 +62,14 @@ def refresh_avatar(username, token=None):
     except (OSError, ValueError, KeyError, ImportError) as error:
         print(f'Avatar refresh unavailable; keeping the saved portrait: {error}')
         return False
+
+
+def main():
+    username = sys.argv[1] if len(sys.argv) > 1 else 'Aicyraa'
+    token = os.environ.get('GH_PAT') or os.environ.get('GITHUB_TOKEN')
+    if refresh_avatar(username, token):
+        (ROOT / 'about-panel.svg').write_text(about_panel(), encoding='utf-8')
+
+
+if __name__ == '__main__':
+    main()
