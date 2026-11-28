@@ -1,13 +1,13 @@
 {
   "username": "Aicyraa",
-  "updated_at": "2026-11-27T10:59:47.519098+00:00",
-  "total_contributions": 2530,
-  "active_days": 257,
+  "updated_at": "2026-11-28T10:37:04.203988+00:00",
+  "total_contributions": 2585,
+  "active_days": 259,
   "best_week": 416,
-  "current_streak": 1,
+  "current_streak": 3,
   "longest_streak": 72,
-  "total_commits": 2308,
-  "total_prs": 39,
+  "total_commits": 2356,
+  "total_prs": 45,
   "public_repos": 55,
   "weekly_contributions": [
     7,
@@ -61,8 +61,8 @@
     315,
     236,
     95,
-    130,
-    31
+    134,
+    82
   ],
   "month_labels": [
     {
@@ -121,38 +121,38 @@
   "languages": [
     {
       "name": "TypeScript",
-      "bytes": 3986185,
-      "pct": 62.59,
+      "bytes": 4105239,
+      "pct": 62.47,
       "color": "#B7A9DE"
     },
     {
       "name": "QML",
-      "bytes": 843011,
-      "pct": 13.24,
+      "bytes": 925753,
+      "pct": 14.09,
       "color": "#78A6C2"
     },
     {
       "name": "Python",
       "bytes": 483272,
-      "pct": 7.59,
+      "pct": 7.35,
       "color": "#8FBF9F"
     },
     {
       "name": "JavaScript",
-      "bytes": 409117,
-      "pct": 6.42,
+      "bytes": 409118,
+      "pct": 6.23,
       "color": "#8B877E"
     },
     {
       "name": "CSS",
-      "bytes": 339718,
-      "pct": 5.33,
+      "bytes": 340445,
+      "pct": 5.18,
       "color": "#B7A9DE"
     },
     {
       "name": "Java",
       "bytes": 126009,
-      "pct": 1.98,
+      "pct": 1.92,
       "color": "#78A6C2"
     }
   ],
@@ -1974,7 +1974,7 @@
     },
     {
       "date": "2026-11-21",
-      "count": 11,
+      "count": 15,
       "level": 1
     },
     {
@@ -1999,13 +1999,18 @@
     },
     {
       "date": "2026-11-26",
-      "count": 2,
+      "count": 8,
       "level": 1
     },
     {
       "date": "2026-11-27",
-      "count": 0,
-      "level": 0
+      "count": 14,
+      "level": 1
+    },
+    {
+      "date": "2026-11-28",
+      "count": 31,
+      "level": 2
     }
   ]
 }
